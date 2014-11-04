@@ -1,0 +1,25 @@
+body{
+    font-family: Arial, Times;
+}
+h1 {
+    text-align:center;
+}
+h2{
+    text-align:center;
+}
+h6{
+    text-align:center;
+}
+p{
+    width:100%;
+}
+img {
+	height: 100px;
+	width: 100px;
+}
+#DivBody{
+    background-color:#00BFFF;
+    position:relative;
+    margin-right:50px;
+    margin-left:50px;
+}
