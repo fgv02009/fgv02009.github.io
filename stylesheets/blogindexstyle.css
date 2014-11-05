@@ -1,0 +1,32 @@
+body {
+	font-family: sans-serif, arial, times;
+}
+
+#divHead {
+	text-align: center;
+}
+
+#blogsnip {
+	position: relative;
+	margin-left: 300px;
+	margin-right: 300px;
+	padding-top: 50px;
+}
+
+.date {
+	font-style:italic;
+	}
+
+a {
+	text-decoration: none;
+	color:6F8EB2;
+}
+
+a:visited {
+	color:7D50B2;
+}
+
+a:hover {
+	color:black;
+	}
+

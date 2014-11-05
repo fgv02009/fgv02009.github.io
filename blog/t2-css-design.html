@@ -1,36 +1,51 @@
-<!-- This template is in markdown, not html, so
-  it will not render beautifully when you copy and
-  paste it into your github.io site, but it will at
-  least be published. Next week you'll be creating a
-  blog template using HTML and CSS and you'll be able
-  to copy and paste the blog posts from week 1 in there
-  to make them pretty next week.
+<!DOCTYPE HTML>
+<HTML>
+<header>
+    <link type = "text/css" rel = "stylesheet" href = "../stylesheets/blog-stylesheet.css"> </header>
+<body background ="upfeathers.png">
+    <div id="DivBody">
+    <h1>
+       Positioning in CSS </h1>
+    <h2>
+        How to be Absolutely Sure You are Relatively in the Right Poistion </h2>
+    <h6>
+        11/4/2014 </h6>
+        <div id ="content">
+            <p>Positioning elements on a webpage can be more confusing than you think. You may think, "this page would look better if I could just move that picture to the left a little bit." So you provide the picture a little padding-left but it doesn't respond the way you think it would. The way an element responds to positioning commands completely depends on the type of positioning it has been assigned. I will attempt to shed some light on this concept.</p>
+            <p>The default position of an element is static positioning. This is where an element would normally go on a page if you chose not to give it any specific directions on its positioning. It is positioned according to the normal flow of the page. Elements that are positioned statically are not affected by the top, bottom, left, and right properties. </p>
+            <p>If you choose to give an element absolute positioning you are positioning that element in relation to the first parent element it has that doesn't have a static position. Thus, if I have a div element (think of it as a box) that has relative positioning (will be explained below--just notice it is not static) and it has a child paragraph (think of it as a paragraph inside of the box) that we give absolute positioning to, that means the paragraphs positioning will be in relation to the box. </p>
+            <p>ALl this means is that the positioning direction I give this paragraph will move it relative to the location of its parent, div. Thus, if I give the paragraph a margin-top of 20 px, it will move down 20 pixels from where it was originally placed inside of that div or box. If I give the paragraph a margin-top of -20px the paragraph will move up 20 px and will most likely start above the top edge of the box.</p>
+            <p>Let's say you have a div given a class name of grandpa with a child div given a class name of pa with a child 
+            paragraph. Remember, think of div's as boxes. Let's say the div with the class name pa has static positioning but the div given a class name of grandpa has relative positioning. Now any positioning you try to do to the paragraph, its movements will all be relative to the div grandpa because it is the first parent without static positioning. </p>
+            <p>We also have relative positioning. Relative positioning is relative to static positioning. If I decide to give a paragraph relative positioning and margin-left of 20px, it will move 20px to the right of where it would have been if it was given static positioning.  </p>
+            <p>Lastly, we have fixed positioning. An element with fixed positioning is positioned relative to the browser. You can think of fixed positioning as gluing an element to the screen; it will not even move as you scroll. 
+            </p>
+            <p>Positioning elements on a webpage can be a bit confusing, you just need to remember to ask yourself what is the element's positioning relative to. How will adding margin or padding actually move this element? I hope this post helped you answer any questions on positioning elements on a webpage.</p>
+            
+        </div>
+    <div id="DivTable">
+    <table>
+        <tr>
+            <td><img src="fgv02009.jpg"><td/>
+            <td><h3>By Flori Garcia-Vicente </h3></td>
+        </tr>
+    </div>
+</body>
+</div>
+</HTML>
 
-  For now, please replace the title, subtitle (if desired),
-  and date with the text you would like. Markdown is pretty
-  simple, so you can just feel free to type. =) You'll want
-  to delete this chunk of a comment as well. -->
 
 
-Fixed, Relative and Absolute Positioning in CSS
 
-You may think laying out your website is difficult. I'm sure you think your position on this topic is absolute, but I hope to change that. 
+ 
 
-11/4/2014
 
-Positioning elements on a webpage can be more confusing than you think. You may think, "this page would look better if I could just move that picture to the left a little bit." So you provide the picture a little padding-left but it doesn't respond the way you think it would. The way an element responds to positioning commands completely depends on the type of positioning it has been assigned. I will attempt to shed some light on this concept.
 
-The default position of an element is static positioning. This is where an element would normally go on a page if you chose not to give it any specific directions on its positioning. It is positioned according to the normal flow of the page. Elements that are positioned statically are not affected by the top, bottom, left, and right properties. 
+ 
 
-If you choose to give an element absolute positioning you are positioning that element in relation to the first parent element it has that doesn't have a static position. Thus, if I have a div element (think of it as a box) that has relative positioning (will be explained below--just notice it is not static) and it has a child paragraph (think of it as a paragraph inside of the box) that we give absolute positioning to, that means the paragraphs positioning will be in relation to the box. 
 
-ALl this means is that the positioning direction I give this paragraph will move it relative to the location of its parent, div. Thus, if I give the paragraph a margin-top of 20 px, it will move down 20 pixels from where it was originally placed inside of that div or box. If I give the paragraph a margin-top of -20px the paragraph will move up 20 px and will most likely start above the top edge of the box.
 
-Let's say you have a div given a class name of grandpa with a child div given a class name of pa with a child 
-paragraph. Remember, think of div's as boxes. Let's say the div with the class name pa has static positioning but the div given a class name of grandpa has relative positioning. Now any positioning you try to do to the paragraph, its movements will all be relative to the div grandpa because it is the first parent without static positioning. 
 
-We also have relative positioning. Relative positioning is relative to static positioning. If I decide to give a paragraph relative positioning and margin-left of 20px, it will move 20px to the right of where it would have been if it was given static positioning.  
 
-Lastly, we have fixed positioning. An element with fixed positioning is positioned relative to the browser. You can think of fixed positioning as gluing an element to the screen; it will not even move as you scroll. 
 
-Positioning elements on a webpage can be a bit confusing, you just need to remember to ask yourself what is the element's positioning relative to. How will adding margin or padding actually move this element? I hope this post helped you answer any questions on positioning elements on a webpage.
+

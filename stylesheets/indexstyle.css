@@ -1,0 +1,55 @@
+body {
+	position:relative;
+	margin: 0px 100px;
+	font-family: sans-serif, arial, times;
+}
+
+#divhead {
+	position: relative;
+	text-align: center;
+	margin-top:25px;
+}
+
+
+
+.hline {
+	position:absolute;
+	margin-top: 20px;
+	width: 100%;
+	height: 2px;
+	background: purple;
+}
+
+img {
+	position:relative;
+	padding-top: 20px;
+}
+
+#me {
+width: 30%;
+}
+
+
+#navlist {
+	display:inline-block;
+	width: 100%;
+	position:absolute;
+	margin-top: 80px;
+}
+
+#navlist li {
+	display: inline;
+	padding-right:120px;
+	list-style: none;
+	position:relative;
+}
+
+
+li a {
+	text-decoration: none;
+
+}
+
+li a:hover {
+	color:black;
+}
