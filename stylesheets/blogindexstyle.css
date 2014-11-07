@@ -1,9 +1,13 @@
-body {
-	font-family: sans-serif, arial, times;
-}
 
 #divHead {
+	font-family: 'Pacifico', cursive;
 	text-align: center;
+	color: #ff65af;
+}
+
+h1 {
+	font-weight:bold;
+	text-decoration:underline;
 }
 
 #blogsnip {
@@ -11,6 +15,7 @@ body {
 	margin-left: 300px;
 	margin-right: 300px;
 	padding-top: 50px;
+	color: #70003a;
 }
 
 .date {
@@ -19,14 +24,14 @@ body {
 
 a {
 	text-decoration: none;
-	color:6F8EB2;
+	color:#b129ff;
 }
 
 a:visited {
-	color:7D50B2;
+	color:#70003a;
 }
 
 a:hover {
-	color:black;
+	color:#ff65af;
 	}
 
