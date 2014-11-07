@@ -1,55 +1,84 @@
 body {
 	position:relative;
 	margin: 0px 100px;
-	font-family: sans-serif, arial, times;
+	font-family: 'Pacifico', cursive;
 }
 
-#divhead {
+.socialnw ul {
+	text-decoration: none;
+	list-style: none;
+	margin-top: 150px;
+}
+
+.socialnw ul li {
+	padding-bottom:75px;
+	padding-left: 50px;
+
+}
+
+.socialnw ul li a img {
+	width: 20px;
+	height:20px;
+}
+
+
+.divhead {
 	position: relative;
-	text-align: center;
 	margin-top:25px;
+	display:inline-block;
+}
+
+.aboutme {
+	display: inline-block;
+	margin-top: 150px;
+}
+
+.aboutme p {
+	margin-left: 20px;
+	color:#ff65af;
+}
+
+.aboutme a {
+	margin-left: 20px;
 }
 
 
 
 .hline {
-	position:absolute;
-	margin-top: 20px;
 	width: 100%;
 	height: 2px;
 	background: purple;
+	margin-top:20px;
+	display:block;
 }
 
-img {
-	position:relative;
+.me img {
 	padding-top: 20px;
 }
 
-#me {
-width: 30%;
+
+.nav {
+	display:block;
+	padding-left:115px;
 }
 
 
-#navlist {
-	display:inline-block;
-	width: 100%;
-	position:absolute;
-	margin-top: 80px;
-}
-
-#navlist li {
+.navlist li {
 	display: inline;
-	padding-right:120px;
+	padding-right:230px;
 	list-style: none;
 	position:relative;
+	padding-bottom: 100px;
+
 }
 
 
-li a {
+a {
 	text-decoration: none;
+	color:#ff65af;
 
 }
 
-li a:hover {
+a:hover {
 	color:black;
 }
