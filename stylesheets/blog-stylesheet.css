@@ -1,17 +1,22 @@
 body{
     font-family: Arial, Times;
+    color:#70003a
 }
 h1 {
+    color:#ff65af;
     text-align:center;
     position: relative;
     padding-top: 20px;
 }
+
 h2{
+    color:#ff65af;
     text-align:center;
 }
 h6{
     text-align:center;
     font-style: italic;
+    color:#ff65af;
 }
 p{
     width:100%;
@@ -32,12 +37,45 @@ img {
 	margin-right: 20px;
 }
 
+.divtable {
+    display: block;
+}
+
 td {
 	position: relative;
 	padding-right: 10px;
 	padding-left: 20px;
 	padding-bottom: 10px;
+    color:#ff65af;
+    display:inline-block;
 }
+
+.navlist {
+    display:block;
+    text-align: center;
+    padding-top:75px;
+}
+
+.navlist li {
+    display: inline;
+    padding-right:30px;
+    list-style: none;
+    position:relative;
+    font-weight:bold;
+    }
+
+a {
+    text-decoration: none;
+    color:#b129ff;
+}
+
+a:visited {
+    color:#ff65af;
+}
+
+a:hover {
+    color:#70003a;
+    }
 
 
 

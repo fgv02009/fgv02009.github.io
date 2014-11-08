@@ -8,7 +8,22 @@
 h1 {
 	font-weight:bold;
 	text-decoration:underline;
+	text-shadow: 1px 0px #b129ff;
 }
+
+
+.navlist {
+	display:block;
+	text-align: center;
+}
+
+.navlist li {
+	display: inline;
+	padding-right:30px;
+	list-style: none;
+	position:relative;
+	font-weight:bold;
+	}
 
 #blogsnip {
 	position: relative;
@@ -28,10 +43,10 @@ a {
 }
 
 a:visited {
-	color:#70003a;
+	color:#ff65af;
 }
 
 a:hover {
-	color:#ff65af;
+	color:#70003a;
 	}
 
