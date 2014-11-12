@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<HTML>
+<header>
+    <link type = "text/css" rel = "stylesheet" href = "../stylesheets/blog-stylesheet.css"> </header>
+<body background ="upfeathers.png">
+    <div id="DivBody">
+    <h1>
+        Blog Title </h1>
+    <h2>
+        Blog Subtitle </h2>
+    <h6>
+        Date </h6>
+        <div id ="content">
+            <p>Array: ordered, integer-indexed collection of any object.</p>
+            <p>Hash: dictionary-like collection of unique keys and their values.</p>
+            <p>What the heck does that mean? Think of an array as a music player that just holds song titles (let's call this array music_player_array). Each song is specified by its index. Arrays begin their index at 0. Thus, the first song in your music holder can be accessed by typing music_player_array[0]. Wouldn't it be more convenient though if we could access the song by identifying the artist instead of having to memorize the order of the songs. Luckily for us, hashes have that capability. While hashes are very similar to arrays, they differ in that the indexing is done using arbitrary keys. So now we can think of a hash (let's call it music_player_hash) as a music player that stores the artist and the song title. Now since the order of the songs doesn't really give us any information about the song (unless we've memorized the order or index) we can instead access the song by passing the hash its key--or in this case the artist. Therefore, as an example, we could type music_player_hash ["lady gaga"] and it would return "Bad Romance."</p>
+            <p>So you may be thinking, "What benefit does an array have over a hash?" Well, it depends on what kind of functionality you need. It is important to remember that a hash is not an ordered set of data whereas an array is. While it may be easy to put data into a hash, it is much harder to get it out in an ordered format. </p>
+            <p>Now that we have an understanding of what an array and a hash are, let's get a little more technical and talk about how to create arrays and hashes. Ruby makes this pretty easy: my_arr = Array.new or my_arr = [ ] create a new (empty) array called my_arr and my_hash= Hash.new or my_hash = { } create a new (empty) hash called my_hash. You can also create non-empty arrays and hashes just as easily: my_new_arr= ["one" "two" "three"] creates an array with three strings stored in it and my_new_hash["name"] = "Andrew" creates a hash with one key-value pair where the key is "name" and the value is "Andrew." Now we can start to see how hashes are more descriptive. </p>
+            <code>my_personal_hash = ["name" => "Flori", "city" => "Chicago", "age"=> 23] </code>
+            <p>This code creates a hash with some of my personal information.</p>
+            <code>my_personal_array = ["Flori", "Chicago", 23] </code>
+            <p>This code creates an array with some of my personal information. </p>
+            <p>Let's say we wanted to access my name. If we want to access it through the hash, we can type my_personal_hash["name"] and the output will be "Flori". This is all very logical, the key to figure out my name is "name". What is the key to figuring out my name in the array? Since arrays are only indexed by integers starting at 0, it must be a number. To access my name through the array, I would need to type my_personal_array[0] and the output would be "Flori". </p>
+            <p>Hopefully this example helps you see the benefits of being able to give your keys arbitrary values in a hash. To get my name I need to plug in the key "name" to the hash, to get my city I need to plug in the key "city" and to get my age I need to plug in the key "age". Well that's easy to understand and makes sense. </p>
+            <p>To get my name from the array I need to plug in index 0 to the array, to get my city I need to plug in index 1, to get my age I need to plug in index 2. Those index numbers are not descriptive at all about the information I'm trying to access, how can I possibly remember that? It's not convenient and that's why you would use a hash instead. However, if the information you were trying to access needed to be in a specific order then you would use an array instead.</p>
+        </div>
+    <div id="DivTable">
+    <table>
+        <tr>
+            <td><img src="fgv02009.jpg"><td/>
+            <td><h3>By Flori Garcia-Vicente </h3></td>
+        </tr>
+    </table>
+    </div>
+    <div class = "navlist">
+            <ul>
+                <li><a href = "../index.html">Home</a></li>
+                <li><a href = "index.html">Blogs</a></li>
+                <li><a href = "#">About Me</a></li>
+                <li><a href = "#">Stuff That Matters</a></li>
+                <li><a href = "#">Projects</a></li>
+            </ul>
+    </div>
+</body>
+</div>
+</HTML>
