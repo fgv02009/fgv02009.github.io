@@ -1,85 +1,71 @@
 body {
-	position:relative;
-	margin: 0px 100px;
-	font-family: 'Pacifico', cursive;
-}
-
-.socialnw ul {
-	text-decoration: none;
-	list-style: none;
-	margin-top: 150px;
-}
-
-.socialnw ul li {
-	padding-bottom:75px;
-	padding-left: 50px;
-	font-weight:bold;
-}
-
-.socialnw ul li a img {
-	width: 20px;
-	height:20px;
+  background-color:#ccc1b9;
 }
 
 
-.divhead {
-	position: relative;
-	margin-top:25px;
-	display:inline-block;
+ul {
+  list-style: none;
 }
 
-.aboutme {
-	display: inline-block;
-	margin-top: 100px;
+li {
+display: inline;
 }
-
-.aboutme p {
-	margin-left: 30px;
-	color:#ff65af;
-}
-
-.aboutme a {
-	margin-left: 30px;
-	color:#b129ff;
-}
-
-
-
-.hline {
-	width: 100%;
-	height: 2px;
-	background: #b129ff;
-	margin-top:20px;
-	display:block;
-}
-
-.me img {
-	padding-top: 20px;
-}
-
-
-.nav {
-	display:block;
-	padding-left:115px;
-}
-
-
-.navlist li {
-	display: inline;
-	padding-right:215px;
-	list-style: none;
-	position:relative;
-	padding-bottom: 100px;
-	font-weight:bold;
-}
-
 
 a {
-	text-decoration: none;
-	color:#ff65af;
+  text-decoration: none;
+  color:white;
+  font-weight:bold;
+  font-family: 'Rock Salt', 'Pacifico', 'Cursive';
+}
 
+a:visited {
+color:black;
 }
 
 a:hover {
-	color:black;
+  color:#ff65af;
+}
+
+
+
+.socialnw ul li {
+  margin-left: 65px;
+}
+
+.socialnw ul li a img {
+  width: 20px;
+  height:20px;
+}
+
+.center img {
+  max-width: 40px;
+  max-height: 40px;
+}
+
+h1 {
+  text-align: center;
+  position: relative;
+  margin-top: -300px;
+  font-size: 75px;
+  font-family: 'Rock Salt', 'Pacifico', 'Cursive';
+  color: white;
+}
+
+.footer {
+  text-align:center;
+}
+
+.footer {
+  position: relative;
+  margin-top: 50px;
+}
+
+.footer li {
+  text-align:center;
+  padding-top: 20px;
+  padding-bottom:20px;
+}
+
+.footer li:nth-child(3) {
+margin-left:-10px;
 }
