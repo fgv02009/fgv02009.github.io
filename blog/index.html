@@ -3,13 +3,14 @@
 <html>
 	<header>
 		<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-		<link type = "text/css" rel = "stylesheet" href = "../stylesheets/blogindexstyle.css"/> 
+    <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+		<link type = "text/css" rel = "stylesheet" href = "../stylesheets/blogindexstyle.css"/>
 	</header>
-  	<body background ="upfeathers.png">
+  	<body>
   		<div id = "divHead">
   			<h1> My DBC Blog Posts </h1>
   		</div>
-  		
+
   		<div class = "navlist">
   			<ul>
   				<li><a href = "../index.html">Home</a></li>
@@ -32,6 +33,16 @@
 			  	<h3>Fixed, Relative and Absolute Positioning in CSS</h3>
 			  	<p> Positioning elements on a webpage can be more confusing than you think. You may think, "this page would look better if I could just move that picture to the left a little bit." So you provide the picture a little padding-left but it doesn't respond the way you think it would. The way an element responds to positioning commands completely depends on the type of positioning it has been assigned. I will attempt to shed some light on this concept. </p> <a href = "t2-css-design.html"> Read More... </a>
 		  	</div>
+        <div id= "week3">
+          <p class ="date"> Week 3 - 11/12/2014 </p>
+          <h3>Thinking Styles</h3>
+          <p> People are wired a certain way. In college, when I was often required to work in groups for projects or assignments, it became very clear to me that what works for some people is often the farthest thing from what works for others. For some people, just being in a group was enough to cause them anxiety. Others thrived in group settings by leading discussions and directing the flow of the project. Some seemed confused by the professor's teaching methods but for others, he could not be more coherent.</p> <a href = "c3_thinking-style.html"> Read More... </a>
+          <h3>Storing Data vs. Ordered Data</h3>
+          <p>Array: ordered, integer-indexed collection of any object.</p>
+          <p>Hash: dictionary-like collection of unique keys and their values.</p>
+          <p>What the heck does that mean? Think of an array as a music player that just holds song titles (let's call this array music_player_array). Each song is specified by its index. Arrays begin their index at 0. Thus, the first song in your music holder can be accessed by typing music_player_array[0]. Wouldn't it be more convenient though if we could access the song by identifying the artist instead of having to memorize the order of the songs. Luckily for us, hashes have that capability. While hashes are very similar to arrays, they differ in that the indexing is done using arbitrary keys. So now we can think of a hash (let's call it music_player_hash) as a music player that stores the artist and the song title. Now since the order of the songs doesn't really give us any information about the song (unless we've memorized the order or index) we can instead access the song by passing the hash its key--or in this case the artist. Therefore, as an example, we could type music_player_hash ["lady gaga"] and it would return "Bad Romance."</p>
+            <a href = "t3-arrays-hashes.html"> Read More... </a>
+        </div>
 		</div>
   	</body>
 </html>
