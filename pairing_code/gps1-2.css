@@ -1,0 +1,39 @@
+footer {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.title {
+  text-align: center;
+  font-family: 'Quicksand', Arial;
+}
+
+.h_line {
+  width: 100%;
+  height: 2px;
+  margin-bottom: 10px;
+  background-color: black;
+}
+
+.paragraphs {
+  margin: 10px 125px 10px 125px;
+}
+
+.images {
+  display: inline-block;
+  margin: 20px 125px 0px 125px;
+}
+
+img {
+width: 454px;
+height: 302px;
+}
+
+img:nth-child(2) {
+  margin-left: 70px;
+}
+
+.reflection {
+  position: absolute;
+  margin: 10px 140px 10px 0px;
+}
