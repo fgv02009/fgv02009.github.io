@@ -6,21 +6,21 @@
 <body>
     <div id="DivBody">
     <h1>
-        Classes in Ruby </h1>
+        Classes </h1>
     <h2>
         and Cars </h2>
     <h6>
         11/25/2014 </h6>
         <div id ="content">
             <p>This week was all about creating and understanding classes in Ruby. I'm going to attempt to pass off some of my recently acquired knowledge on this topic to you. </p>
-            <p>Classes are extremely important when it comes to structuring code. They allow a developer to model real life situations. Inside of a class live numerous instance variables and methods. Once a class is created, an instance of that class can be created. This instance and any other instance of the class that may be created will have access to those method. That's probably a little confusing so let's take a look at a couple of examples.</p>
-            <p>First we have class String, which is a built in ruby class and thus, when we create an instance of it, that instance has access to every method inside the class String. Ex:</p>
+            <p>Classes are extremely important when it comes to structuring code. They allow a developer to model real life situations. Inside of a class live numerous instance variables and methods. Once a class is created, an instance of that class can be created. This instance and any other instance of the class that may be created will have access to those methods. That's probably a little confusing so let's take a look at a couple of examples.</p>
+            <p>First we have class String, which is a built-in ruby class and thus, when we create an instance of it, that instance has access to every method inside the class String. Ex:</p>
             <code>apple = "this is an instance of the class string"<br>
             #we have created an instance of the Ruby class String.<br>
             #Inside of String there is a method called reverse that reverses the string. Therefore, we can call this method on any instance of string, including apple.<br>
             apple.reverse = "gnirts ssalc eht fo ecnatsni na si siht"
             </code>
-            <p>Above is an example of a built in class, but Ruby allows you to create your own classes and create unique methods that are only available to instances of that class. Let's see what this looks like:</p>
+            <p>Above is an example of a built-in class, but Ruby allows you to create your own classes and create unique methods that are only available to instances of that class. Let's see what this looks like:</p>
             <code> #creating a class called Classes<br><pre>
             class Classes<br>
             attr_reader :students <br></pre>
@@ -32,9 +32,11 @@
             #Creating a method that let's you add a student or students to an instance of class Classes<br><pre>
                 def add_students(number)<br>
                     @students += number<br>
-                end<br>
+                end<br></pre>
+            #closing the class Class
+            <pre>
             end<br></pre>
-            #creates an instance of the class classes with 23 students <br><pre>
+            #creates an instance of the class Classes with 23 students <br><pre>
         algebra = Classes.new(algebra, 23)</pre><br>
             #adds five student to the algebra instance of Classes<br><pre>
         algebra.add_students(5)</pre><br>
@@ -47,7 +49,7 @@
         Delila = Car.new(Honda, Civic 2008, black)
             </code></pre>
             <p>Delila would then have access to any of the methods that I created within the class Car. So if the class Car had a get_a_paint_job method, I could call this method: <code>Delila.get_a_paint_job(red)</code><br> and then when I ask for Delila's color:<br> <code>Delila.color</code><br> it will return red. (This is a little bit simplistic and ignoring the fact that class Car would need a read method for color, but that is out of the scope of this blog. I just want you to understand how classes allow instances of that class to access their methods and how powerful these methods can be.)</p>
-            <p>This week we have really dived deep into understanding classes, their variables and their methods. Classes are powerful tools that allow developers to structure their code in a logical manner. They are the building blocks to readable, organized and creative coding. Hopefully, I was able to give you a little sense of how useful classes can be. </p>
+            <p>This week in DBC's Phase 0, we have really dived deep into understanding classes, their variables and their methods. While this blog post just skimmed the surface of classes, I hope it helped you grasp their importance. Classes are powerful tools that allow developers to structure their code in a logical manner. They are the building blocks to readable, organized and creative coding. Hopefully, I was able to give you a little sense of how useful classes can be. </p>
         </div>
     <div id="DivTable">
     <table>
