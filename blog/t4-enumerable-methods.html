@@ -25,19 +25,19 @@
             <code>
                 books = ["book1", "book2", "book3", "book4"] <br>
             </code>
-            <code>
+            <code><pre>
 
-genre_hash = books.group_by do |genre| <br>
-   case rating <br>
-       when "book1" || "book2" <br>
-          "historical fiction"<br>
-       when "book3" <br>
-          "science fiction"<br>
-       when "book4" <br>
-           "non-fiction"<br>
-        end<br>
-end<br>
-            </code>
+genre_hash = books.group_by do |genre|
+   case rating
+    when "book1" || "book2"
+        "historical fiction"
+    when "book3"
+        "science fiction"
+    when "book4"
+        "non-fiction"
+    end
+end
+            </pre></code>
             <p>This would return a hash like this:</p>
             <code>
                 {"historical fiction"=>["book1", "book2"], "science fiction"=>["book3"], "non-fiction"=>[book4]}
