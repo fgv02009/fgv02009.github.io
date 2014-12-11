@@ -1,5 +1,24 @@
+
 body {
-  background-color:#ccc1b9;
+  /*background-color:#ccc1b9;*/
+  background-color: white;
+  margin:0px;
+  display:block;
+  height: 100%;
+  overflow:scroll;
+}
+
+header {
+  width:100%;
+  height:50px;
+  position: fixed;
+  padding-bottom: 12.5px;
+  background: #FFF;
+  opacity: .95;
+  z-index: 5;
+  border-bottom-width:1px;
+  border-bottom-color:#E5E5E5;
+  border-bottom-style:solid;
 }
 
 
@@ -11,15 +30,101 @@ li {
 display: inline;
 }
 
-a {
+header ul li a img {
+  width: 20px;
+  height:20px;
+}
+
+.center {
+  height: 75%;
+}
+
+.clearfix {
+  overflow:auto;
+}
+
+.center img {
+  position:relative;
+  width: 100%;
+  height: 100%;
+  display:block;
+  margin:auto;
+  margin-top: 50px;
+}
+
+h2 {
+  text-align: center;
+  position: relative;
+  margin-top: -300px;
+  font-size: 50px;
+  font-family: 'Rock Salt', 'Pacifico', 'Cursive';
+}
+
+.text {
+  width:800px;
+  color: white;
+  border-style: solid;
+  border-width: 5px;
+  border-color: white;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.tagline {
+font-family: 'Josefin Sans', sans-serif;
+margin: 75px 125px 25px 125px;
+text-align: center;
+display:block;
+}
+
+.tagline_1 {
+font-size: 55px;
+color: #555;
+text-transform: uppercase;
+}
+
+.tagline_2 {
+font-size: 25px;
+color: #555;
+margin-top: 5px;
+text-transform: uppercase;
+}
+
+.tagline_2 a {
+  text-decoration:none;
+}
+
+.footer {
+  margin-top:50px;
+  text-align:center;
+  width: 100%;
+  display: block;
+  height:50px;
+  position: absolute;
+  background: #FFF;
+  opacity: .95;
+  z-index: 5;
+  border-top-width:1px;
+  border-top-color:#E5E5E5;
+  border-top-style:solid;
+}
+
+
+.footer li {
+  text-align:center;
+  padding-top: 20px;
+  padding-bottom:20px;
+  padding-right:100px;
+}
+
+.footer a {
   text-decoration: none;
-  color:white;
   font-weight:bold;
   font-family: 'Rock Salt', 'Pacifico', 'Cursive';
 }
 
 a:visited {
-color:black;
+color:#555;
 }
 
 a:hover {
@@ -28,44 +133,4 @@ a:hover {
 
 
 
-.socialnw ul li {
-  margin-left: 65px;
-}
 
-.socialnw ul li a img {
-  width: 20px;
-  height:20px;
-}
-
-.center img {
-  max-width: 40px;
-  max-height: 40px;
-}
-
-h1 {
-  text-align: center;
-  position: relative;
-  margin-top: -300px;
-  font-size: 75px;
-  font-family: 'Rock Salt', 'Pacifico', 'Cursive';
-  color: white;
-}
-
-.footer {
-  text-align:center;
-}
-
-.footer {
-  position: relative;
-  margin-top: 50px;
-}
-
-.footer li {
-  text-align:center;
-  padding-top: 20px;
-  padding-bottom:20px;
-}
-
-.footer li:nth-child(3) {
-margin-left:-10px;
-}
