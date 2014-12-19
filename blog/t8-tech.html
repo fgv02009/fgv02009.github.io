@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<HTML>
+<header>
+    <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+    <link type = "text/css" rel = "stylesheet" href = "../stylesheets/blog-stylesheet.css"> </header>
+<body>
+    <div id="DivBody">
+    <h1>
+        What is Rails? </h1>
+    <h2>
+        Understanding the Framework </h2>
+    <h6>
+        12/18/2014 </h6>
+        <div id ="content">
+            <p>Since we're getting close to phase 1 and we haven't discussed Rails yet, I figured I'd do some research and share what I found. Rails is an open source web application framework that is written in Ruby. It is a full-stack framework, meaning it helps you fully develop all aspects of the application from the user interface to the data storage. Rails emphasizes the use of well-known software engineering patterns and paradigms, including convention over configuration, don't repeat yourself, the active record pattern and model-view-controller. </p>
+            <p>Many other full-stack frameworks also use the model-view-controller pattern to organize how the application is programmed. You may be asking what is a model-view controller pattern. Well, let's break it down a bit by using an analogy.</p>
+            <p>You walk into McDonalds and you order a coke and a burger from the person at the register. The person working the register gets the coke and yells back to the people in the kitchen to prepare you a burger. You wait patiently, and someone from the kitchen brings the burger to the person working the register, who then puts the burger and the coke in a bag and presents you with your meal. How does this relate to Rails? Well as a customer at McDonalds, you are not allowed to walk back into the kitchen and see all the ingredients and create a burger for yourself. As a user of a web application, the concept is similar. </p>
+            <p>As a user, you can only communicate with the controller and you can only see the view. Similar to how at McDonalds you only communicated with the person at the register and you were presented with your food. The controller is the part of Rails that communicates with external requests from the web server. It reads these request and decides what view file to provide. Depending on the complexity of the request, the controller may have to query some of the models for information and pass these on to the view. </p>
+            <p>So the controller, like the person at the register can present you with a view directly (like he did when he went and got you a coke), or he can communicate with the models to get you a different view (like he did when he communicated with the kitchen staff to get you a burger). The models in Rails are where all the back-end code is (Ruby). The models talk to the database and create, delete, update and read the data. After the model does its thing, the controller passes a new view forward to the user. </p>
+            <p>If you haven't guessed this yet, the view is all your html, css, and javascript. It is what the user actually sees. There is a reason why customers aren't allowed to see all the work that goes on behind the scenes at a store and it's the same reason users of a web application can only see the view. Most users can't make sense of all the front end and back end development, and even if they can, they don't want to. They visited your web application for an easy, user-friendly experience. By organizing your application in a model-view-controller pattern, you can provide your user with just that. </p>
+            <p>While this is an extremely simplified post about Rails and the model-view-controller pattern, hopefully it helped you understand the power of a full-stack framework like Rails. </p>
+        </div>
+    <div id="DivTable">
+    <table>
+        <tr>
+            <td><img src="fgv02009.jpg"><td/>
+            <td><h3>By Flori Garcia-Vicente </h3></td>
+        </tr>
+    </table>
+    </div>
+    <div class = "navlist">
+            <ul>
+                <li><a href = "../index.html">Home</a></li>
+                <li><a href = "index.html">Blogs</a></li>
+                <li><a href = "#">About Me</a></li>
+                <li><a href = "#">Stuff That Matters</a></li>
+                <li><a href = "#">Projects</a></li>
+            </ul>
+    </div>
+</body>
+</div>
+</HTML>
