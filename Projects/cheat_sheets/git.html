@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Git Cheat Sheet</title>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,800italic,400,800,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="../../stylesheets/git.css">
+  <link rel="stylesheet" href="GIT-cheatsheet-print.css" type="text/css" media="print" />
+
+</head>
+
+<body>
+  <header>
+
+    <h1> GIT Cheat Sheet </h1>
+
+    <nav>
+      <a href="#box_1">Create Repositories</a>
+      <a href="#box_1">Make Changes</a>
+      <a href="#box_2">Branches & Merging</a>
+      <a href="#box_2">Relocate & Remove Files</a>
+      <a href="#box_3">Store Work in Progress</a>
+      <a href="#box_3">History</a>
+      <a href="#box_4">Create & Clone Repo</a>
+      <a href="#box_4">Undoing Changes</a>
+      <a href="#box_5">Merge Conflict</a>
+      <a href="#box_6">Shortcuts & Emoticons</a>
+
+
+    </nav>
+  </header>
+
+  <section>
+
+  <div id="box_1">
+
+    <h4>Create Repositories</h4>
+    <ul>
+      <h4>git init [project-name]</h4>
+      <li>creates new local repo with specific</li>
+
+      <h4>git clone [url]</h4>
+      <li>to download project from Github</li>
+    </ul>
+
+    <h4>Make Changes</h4>
+    <ul>
+      <h4>git status</h4>
+      <li>list new and modified files</li>
+
+      <h4>git diff</h4>
+      <li>shows file diff. that have not been saved</li>
+
+      <h4>git add [file]</h4>
+      <li>preparing to commit file</li>
+
+      <h4>git add '*.file type'</h4>
+      <li>adds a specific file type</li>
+
+      <h4>git diff --staged</h4>
+      <li>shows file diff between staging and last file</li>
+
+      <h4>git commit --a</h4>
+      <li>commit all local changes in tracked files</li>
+
+      <h4>git commit --m [message]</h4>
+      <li>records file permanently</li>
+
+      <h4>git push [origin][master]</h4>
+      <li>pushing changes to the master repo</li>
+    </ul>
+  </div>
+
+
+  <div id="box_2">
+
+    <h4>Branches and Merging</h4>
+    <ul>
+      <h4>git branch</h4>
+      <li>lists local branches in current repo</li>
+
+      <h4>git branch [name]</h4>
+      <li>creates new branch</li>
+
+      <h4>git checkout [branch-name]</h4>
+      <li>switches to specified branch and updates directory</li>
+
+      <h4>git merge [branch]</h4>
+      <li>combines specified branch history into current branch</li>
+
+      <h4>git branch --d [branch name]</h4>
+      <li>deletes specified branch</li>
+    </ul>
+
+    <h4>Relocate and Remove Files</h4>
+    <ul>
+      <h4>git rm [file]</h4>
+      <li>deletes file from working directory and stages deletion</li>
+
+      <h4>git rm --cached [file]</h4>
+      <li>removes file from version control but preserves file locally</li>
+
+      <h4>git mv [file original] [file renamed]</h4>
+      <li>changes file name and prepares it for commit</li>
+    </ul>
+  </div>
+
+
+  <div id = "box_3">
+
+    <h4>Store Work in Progress</h4>
+    <ul>
+      <h4>git stash</h4>
+      <li>temporarily stores modified tracked files</li>
+
+      <h4>git stash pop</h4>
+      <li>restores most recently stashed files</li>
+
+      <h4>git stash list</h4>
+      <li>list all stashed changesets</li>
+
+      <h4>git stash drop</h4>
+      <li>discards the most recently stashed changeset</li>
+
+    </ul>
+
+    <h4>History</h4>
+    <ul>
+      <h4>git log</h4>
+      <li>shows history of commits for current branch</li>
+
+      <h4>git log --p [file] </h4>
+      <li>shows changes over time for a specific file</li>
+
+      <h4>git log --follow [file] </h4>
+      <li>lists version history for a file, including renames</li>
+
+      <h4>git diff [first branch]...[second-branch] </h4>
+      <li>shows content differences between two branches</li>
+
+      <h4>git show [commit] </h4>
+      <li>outputs metadata and content changes of specified commit and can use SHA</li>
+
+      <h4>git blame [file] </h4>
+      <li>checks who changed what and when in file</li>
+
+    </ul>
+  </div>
+
+  <div id = "box_4">
+
+    <h4>Create and Clone Repo</h4>
+    <ul>
+      <h4>git clone [url] </h4>
+      <li>create a copy of an existing Git repo into a newly created directory</li>
+
+      <h4>git remote --v</h4>
+      <li>lists all currently configured remotes</li>
+
+      <h4>git remote show [remote] </h4>
+      <li>info about a remote</li>
+
+      <h4>git remote add [remote][url] </h4>
+      <li>add new remote repository</li>
+
+      <h4>git fetch [remote] </h4>
+      <li>downloads all changes from remote but not integrated in head</li>
+
+      <h4>git pull [remote][branch] </h4>
+      <li>downloads changes and directly merges into HEAD</li>
+
+      <h4>git push [remote][branch] </h4>
+      <li>publish local changes on a remote</li>
+
+      <h4>git push [remote] :[branch] </h4>
+      <li>delete a branch on remote</li>
+    </ul>
+
+    <h4>Undoing Changes</h4>
+    <ul>
+      <h4>git reset [file] </h4>
+      <li>unstages file and preserves contents</li>
+
+      <h4>git reset --hard HEAD</h4>
+      <li>discard all local changes in working directory</li>
+
+      <h4>git checkout HEAD [file] </h4>
+      <li>discard local changes in a specific file</li>
+    </ul>
+  </div>
+
+  <div id = "box_5">
+
+    <h4>Merge conflict</h4>
+    <ul>
+      <h4>git mergetool</h4>
+      <li>solve conflicts</li>
+
+      <h4>git add [resolved file] </h4>
+
+      <h4>git rm [resolved file] </h4>
+      <li>manually solve conflicts and make files as resolved</li>
+
+    </ul>
+  </div>
+
+  <div id="box_6">
+    <h4>Keyboard Shortcuts</h4>
+    <ul>
+      <li><span class ="key">t</span>  bring up a file explorer</li>
+      <li><span class ="key">w</span>  bring up the branch selector</li>
+      <li><span class ="key">s</span>  select the Command Bar</li>
+      <li><span class ="key">l</span>  edit labels on</li>
+      <li><span class ="key">n</span>  go to notifications</li>
+      <li><span class ="key">d</span>  go to Dashboard</li>
+      <li><span class ="key">?</span>  see all of the shortcuts for the current page</li>
+    </ul >
+
+    <h4>Emoticons</h4>
+    <ul>
+
+      <li>:smiley:</li>
+      <li>:+1:</li>
+      <li>:-1:</li>
+      <li>:confused:</li>
+      <li>:question:</li>
+    </ul>
+    </div>
+
+  </section>
+
+  <footer>
+  <h4>Resources</h4>
+    <ul>
+    <li><a href ="http://www.git-tower.com/blog/git-cheat-sheet-detail/">Tower Blog</a></li>
+    <li><a href="https://training.github.com/kit/downloads/github-git-cheat-sheet.pdf">GitHub Cheat Sheet</a></li>
+    <li><a href="http://www.emoji-cheat-sheet.com/">Emoji Cheat Sheet</a></li>
+    </ul>
+    <h6>Created by Dalal <a href="https://twitter.com/dalrayes">(@dalrayes)</a> & Dicko <a href="https://twitter.com/s12dsow">(@s12dsow)</a> <br>Let us know what you think!</h6>
+  </footer>
+
+</body>
+
+</html>
+

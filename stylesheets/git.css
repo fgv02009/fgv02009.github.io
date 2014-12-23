@@ -1,0 +1,157 @@
+/*our colors*/
+/*FCFFF5 white*/
+/*D1DBBD green*/
+/*91AA9D green grey*/
+/*3E606F blue*/
+/*193441 navy*/
+
+
+html {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #D5DEDE;
+}
+
+h1 {
+  text-align: center;
+  color: #EB7F00;
+  margin: 10px;
+}
+
+header {
+  margin: 0px 0px 0px 0px;
+  padding-top: 10px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #193441;
+  background-color: #202436;
+}
+
+nav {
+  text-align: center;
+  font-size: 0.8em;
+  padding-bottom: 5px;
+
+}
+
+nav a {
+  font-weight: 600;
+  width:15%;
+  display: inline-block;
+  vertical-align: center;
+  margin: 0px 0px 0px 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  padding: 3px;
+  letter-spacing: 0.1px;
+}
+
+section {
+  background-color: #FAFAFF;
+}
+
+div {
+  background-color: #FFFFFC;
+  padding: 5px 0px 10px 15px;
+  margin: 10px 10px 0px 60px;
+  box-shadow: 0 .125em .5em rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  }
+
+h4 {
+  color: #575757;
+  margin: 8px;
+}
+
+ul h4 {
+  color: #EB7F00;
+  margin: 6px 0px 0px 0px;
+}
+
+ul {
+  list-style-type: none;
+  font-size: 0.7em;
+  padding-left: 25px;
+  margin: 0px;
+}
+
+#box_1 {
+  width: 40%;
+  height: auto;
+  float: left;
+}
+
+#box_2 {
+  width: 40%;
+  height: 424px;
+  float: left;
+}
+
+#box_3 {
+  width: 40%;
+  height: 460px;
+  float: left;
+  clear: both;
+}
+
+#box_4 {
+  width: 40%;
+  height: auto;
+  float: left;
+}
+
+#box_5 {
+  width: 40%;
+  height: 256px;
+  clear: both;
+  float: left;
+}
+
+#box_6 {
+  width: 40%;
+  height: auto;
+  float: left;
+}
+
+footer {
+    background-color: #C4E5F2;
+    width: 87%;
+    height: auto;
+    clear: both;
+    float: left;
+    padding: 5px 0px 18px 15px;
+    margin: 10px 10px 15px 60px;
+    box-shadow: 0 .125em .5em rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+a:link {
+  color: #A6ADAD;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #A6ADAD;
+}
+
+a:hover {
+  color: #87C9C9;
+}
+
+footer li {
+  list-style-type: none;
+}
+
+h6{
+  margin:5px 0px 0px 0px;
+  font-style: italic;
+  text-align: center;
+  color:#EB7F00;
+}
+
+.key{
+  font-family: monospace;
+  padding: 1px 6px;
+  color: #303030;
+  border: 1px solid #e0e0e0;
+  border-bottom-width: 2px;
+  white-space: nowrap;
+}

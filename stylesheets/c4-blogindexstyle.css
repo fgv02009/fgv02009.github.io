@@ -1,0 +1,59 @@
+
+#divHead {
+	font-family: 'Rock Salt' 'Pacifico', cursive;
+	text-align: center;
+	color: white;
+}
+
+body {
+	background-color:#ccc1b9;
+}
+
+h1 {
+	font-weight:bold;
+	text-decoration:underline;
+	text-shadow: 1px 1px black;
+}
+
+
+.navlist {
+	display:block;
+	text-align: center;
+}
+
+.navlist li {
+	display: inline;
+	padding-right:50px;
+	list-style: none;
+	position:relative;
+	font-weight:bold;
+	text-decoration:underline;
+	}
+
+#blogsnip {
+	position: relative;
+	margin-left: 300px;
+	margin-right: 300px;
+	padding-top: 20px;
+	padding-bottom: 50px;
+	color: black;
+}
+
+.date {
+	font-style:italic;
+	}
+
+a {
+	text-decoration: none;
+	color:white;
+	font-family: 'Rock Salt', 'Pacifico', 'Cursive';
+}
+
+a:visited {
+color:black;
+}
+
+a:hover {
+  color:#ff65af;
+}
+

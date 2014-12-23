@@ -1,0 +1,27 @@
+body {
+  text-align: center;
+}
+
+#explain{
+  width:400px;
+  margin:0 auto;
+}
+
+img {
+  height:50%;
+  width:50%;
+}
+
+#cheatsheet {
+  text-align:left;
+  width: 600px;
+  margin: 0 auto;
+}
+
+ul {
+  list-style:none;
+}
+
+p {
+width: 400px;
+}
