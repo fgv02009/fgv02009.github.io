@@ -1,31 +1,43 @@
 <!DOCTYPE HTML>
 <HTML>
-<header>
-    <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
-    <link type = "text/css" rel = "stylesheet" href = "../stylesheets/blog-stylesheet.css"> </header>
-<body>
-    <div id="DivBody">
-    <h1>
-        .group_by </h1>
-    <h2>
-        How To Use The .group_by Method </h2>
-    <h6>
-        11/18/2014 </h6>
-        <div id ="content">
-            <p>The enumerable module provides a number of methods that are used to traverse, sort, arrange and rearrange collections. These methods have proven EXTREMELY useful as I've made my way through Phase 0. The method I'm going to teach  is a method called .group_by.</p>
-            <p>The thing to remember about enumerables, is that they are used on collections. The .group_by method in its most simplistic use can take a collection and pass it into a hash that describes the way you wanted the original collection grouped. This will be much easier to understand through examples. Let's say you have a collection of numbers from 1 to 30 and you want to group it by number left over when divided by 4. In programming this is called the modulus and it is represented with the % sign. So for instance 5%4 returns 1, because the remainder of 5/4 is 1. Therefore, if we go back to our example above we can see that our collection of numbers will be broken down into 4 groups. The group that has a remainder of 0, 1, 2, and 3 when divided by 4. This is what the code would look like:</p>
-            <code>(1..30).group_by {|i| i%4}
-            </code>
-            <p>It would return a hash like this:</p>
-            <code>
-            {0=>[1,2,3,4,8,12,16,20,24,28], 1 => [5,9,13,17,21,25,29], 2 => [6,10,14,18,22,26,30], 3 => [7,11,15,19,23,27]}
-            </code>
-            <p>Ok, so maybe you're starting to get it but that doesn't seem like a relevant use of grouping. What if you had a collection of book titles and you wanted to group them by genre. You would have to use a bit more complex code by the idea would be the same:</p>
-            <code>
-                books = ["book1", "book2", "book3", "book4"] <br>
-            </code>
-            <code><pre>
+    <head>
+        <link type = "text/css" rel = "stylesheet" href = "../stylesheets/blog-stylesheet.css"
+    </head>
+    <body>
+        <header>
+          <ul>
+            <li><a href ="https://twitter.com/FloriGarcia1"/>
+              <img src= "Twitter_logo.png"></a>
+            </li>
+            <li><a href ="https://www.facebook.com/flori.garcia.3"/>
+              <img src= "fb_logo.png"></a>
+            </li>
+            <li><a href ="https://plus.google.com/u/0/102513395518148946200/posts?cfem=1"/>
+              <img src= "GooglePlus_logo.png"></a>
+            </li>
+            <li><a href ="https://www.linkedin.com/profile/view?id=156562910&trk=nav_responsive_tab_profile_pic/>"/>
+              <img src= "LinkedIn_logo.png"></a>
+            </li>
+        </ul>
+        </header>
+        <div id="DivBody">
+            <div class = "title">.group_by </div>
+            <div class = "subtitle">How To Use The .group_by Method  </div>
+            <h6>11/18/2014 </h6>
+            <div id ="content">
+                <p>The enumerable module provides a number of methods that are used to traverse, sort, arrange and rearrange collections. These methods have proven EXTREMELY useful as I've made my way through Phase 0. The method I'm going to teach  is a method called .group_by.</p>
+                <p>The thing to remember about enumerables, is that they are used on collections. The .group_by method in its most simplistic use can take a collection and pass it into a hash that describes the way you wanted the original collection grouped. This will be much easier to understand through examples. Let's say you have a collection of numbers from 1 to 30 and you want to group it by number left over when divided by 4. In programming this is called the modulus and it is represented with the % sign. So for instance 5%4 returns 1, because the remainder of 5/4 is 1. Therefore, if we go back to our example above we can see that our collection of numbers will be broken down into 4 groups. The group that has a remainder of 0, 1, 2, and 3 when divided by 4. This is what the code would look like:</p>
+                <code>(1..30).group_by {|i| i%4}
+                </code>
+                <p>It would return a hash like this:</p>
+                <code>
+                {0=>[1,2,3,4,8,12,16,20,24,28], 1 => [5,9,13,17,21,25,29], 2 => [6,10,14,18,22,26,30], 3 => [7,11,15,19,23,27]}
+                </code>
+                <p>Ok, so maybe you're starting to get it but that doesn't seem like a relevant use of grouping. What if you had a collection of book titles and you wanted to group them by genre. You would have to use a bit more complex code by the idea would be the same:</p>
+                <code>
+                    books = ["book1", "book2", "book3", "book4"] <br>
+                </code>
+                <code><pre>
 
 genre_hash = books.group_by do |genre|
    case rating
@@ -37,34 +49,29 @@ genre_hash = books.group_by do |genre|
         "non-fiction"
     end
 end
-            </pre></code>
-            <p>This would return a hash like this:</p>
-            <code>
-                {"historical fiction"=>["book1", "book2"], "science fiction"=>["book3"], "non-fiction"=>[book4]}
-            </code>
-            <p>Hope these examples helped you understand the group_by method!</p>
-
-
-
-
+                </pre></code>
+                <p>This would return a hash like this:</p>
+                <code>
+                    {"historical fiction"=>["book1", "book2"], "science fiction"=>["book3"], "non-fiction"=>[book4]}
+                </code>
+                <p>Hope these examples helped you understand the group_by method!</p>
+            </div>
+        <div id="DivTable">
+            <table>
+                <tr>
+                    <td><img src="fgv02009.jpg"><td/>
+                    <td><h3>By Flori Garcia-Vicente </h3></td>
+                </tr>
+            </table>
         </div>
-    <div id="DivTable">
-    <table>
-        <tr>
-            <td><img src="fgv02009.jpg"><td/>
-            <td><h3>By Flori Garcia-Vicente </h3></td>
-        </tr>
-    </table>
-    </div>
-    <div class = "navlist">
+        <div class = "footer"
             <ul>
-                <li><a href = "../index.html">Home</a></li>
-                <li><a href = "index.html">Blogs</a></li>
-                <li><a href = "#">About Me</a></li>
-                <li><a href = "#">Stuff That Matters</a></li>
-                <li><a href = "#">Projects</a></li>
+                <li><a href ="../index.html">Home</a></li>
+                <li><a href ="../blog/index.html">Blogs</a></li>
+                <li><a href ="#">About Me</a></li>
+                <li><a href ="../Projects/index.html">Projects</a></li>
             </ul>
-    </div>
-</body>
-</div>
+        </div>
+        </div>
+    </body>
 </HTML>
