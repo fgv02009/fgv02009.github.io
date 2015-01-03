@@ -20,7 +20,7 @@ header {
 }
 
 #DivBody {
-    padding-top:70px;
+    padding-top:90px;
     font-family: 'Josefin Sans' sans-serif;
     text-align:center;
     position:relative;
@@ -30,9 +30,14 @@ header {
 
 .title {
     font-size:55px;
+    margin-right: 120px;
+    margin-left:120px;
+    margin-bottom:20px;
 }
 .subtitle {
     font-size:35px;
+    margin-right: 120px;
+    margin-left:120px;
 }
 
 header ul li a img {
