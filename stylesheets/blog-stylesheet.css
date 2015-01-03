@@ -1,29 +1,56 @@
-body{
-    font-family: 'PT Sans Narrow', sans-serif;
-    color:black;
-    background-color:#ccc1b9
+body {
+  background-color: white;
+  margin:0px;
+  display:block;
+  height: 100%;
+  overflow:scroll;
 }
 
-h1 {
-    font-family: 'Rock Salt' 'Pacifico' 'Cursive';
-    color:white;
-    text-align:center;
-    position: relative;
-    padding-top: 20px;
-    text-shadow: 1px 1px black;
+header {
+  width:100%;
+  height:50px;
+  position: fixed;
+  padding-bottom: 12.5px;
+  background: #FFF;
+  opacity: .95;
+  z-index: 5;
+  border-bottom-width:1px;
+  border-bottom-color:#E5E5E5;
+  border-bottom-style:solid;
 }
 
-h2{
-    font-family: 'Rock Salt' 'Pacifico' 'Cursive';
-    color:white;
+#DivBody {
+    padding-top:70px;
+    font-family: 'Josefin Sans' sans-serif;
     text-align:center;
-    text-shadow: 1px 1px black;
+    position:relative;
+    margin-right:50px;
+    margin-left:50px;
+}
+
+.title {
+    font-size:55px;
+}
+.subtitle {
+    font-size:35px;
+}
+
+header ul li a img {
+  width: 20px;
+  height:20px;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+display: inline;
 }
 
 h6{
     text-align:center;
     font-style: italic;
-    color:white;
 }
 
 p{
@@ -35,16 +62,12 @@ img {
 	width: 120px;
 }
 
-#DivBody{
-    position:relative;
-    margin-right:50px;
-    margin-left:50px;
-}
 
 #content {
+    text-align: left;
 	position: relative;
-	margin-left: 100px;
-	margin-right: 100px;
+	margin-left: 120px;
+	margin-right: 120px;
 }
 
 .divtable {
@@ -53,7 +76,7 @@ img {
 
 table {
     position: relative;
-    margin-left:175px;
+    margin:auto;
     padding-top:25px;
 }
 
@@ -62,35 +85,50 @@ td {
 	padding-right: 10px;
 	padding-left: 20px;
 	padding-bottom: 10px;
-    color:white;
     display:inline-block;
-    font-family: 'Rock Salt' 'Pacifico' 'Cursive';
-
 }
 
-.navlist {
-    display:block;
-    text-align: center;
-    padding-top:50px;
+.footer {
+  margin-top:50px;
+  padding-top:20px;
+  text-align:center;
+  width: 100%;
+  display: block;
+  height:50px;
+  position: absolute;
+  background: #FFF;
+  opacity: .95;
+  z-index: 5;
+  border-top-width:1px;
+  border-top-color:#E5E5E5;
+  border-top-style:solid;
+  padding-bottom:-50px;
 }
 
-.navlist li {
-    display: inline;
-    padding-right:40px;
-    list-style: none;
-    position:relative;
-    font-weight:bold;
-    padding-bottom: 50px;
-    }
+.footer li:not(:last-child):after{
+    content: " | ";
+}
+
+
+.footer li {
+  font-family: 'Josefin Sans', sans-serif;
+  list-style:none;
+  display:inline;
+}
+
+.footer a {
+  font-weight:bold;
+}
+
 
 a {
-    text-decoration: underline;
-    color:white;
-    font-family: 'Rock Salt' 'Pacifico' 'Cursive';
+    text-decoration: none;
+    font-family: 'Josefin sans' sans-serif;
+    color:#65c9ff;
 }
 
 a:visited {
-    color:black;
+color:#555;
 }
 
 a:hover {

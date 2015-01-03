@@ -1,36 +1,47 @@
 body {
-  font-family: 'PT Sans Narrow', sans-serif;
-}
-#divHead {
-  font-family: 'Rock Salt' 'Pacifico', cursive;
-  text-align: center;
-  color: white;
-}
-
-body {
-  background-color:#ccc1b9;
-}
-
-h1 {
-  font-weight:bold;
-  text-decoration:underline;
-  text-shadow: 1px 1px black;
-}
-
-
-.navlist {
+  background-color: white;
+  margin:0px;
   display:block;
-  text-align: center;
+  height: 100%;
+  overflow:scroll;
+  font-family: 'Josefin Sans' sans-serif;
 }
 
-.navlist li {
-  display: inline;
-  padding-right:50px;
-  list-style: none;
-  position:relative;
-  font-weight:bold;
-  text-decoration:underline;
-  }
+header {
+  width:100%;
+  height:50px;
+  position: fixed;
+  padding-bottom: 12.5px;
+  background: #FFF;
+  opacity: .95;
+  z-index: 5;
+  border-bottom-width:1px;
+  border-bottom-color:#E5E5E5;
+  border-bottom-style:solid;
+}
+
+ul {
+  list-style:none;
+}
+
+header li{
+  display:inline;
+}
+
+header ul li a img {
+  width: 20px;
+  height:20px;
+}
+
+#divHead {
+  font-family: 'Josefin Sans' sans-serif;
+  font-size: 55px;
+  text-align: center;
+  color: black;
+  display: block;
+  padding-top:70px;
+}
+
 
 #projects {
   position: relative;
@@ -42,22 +53,67 @@ h1 {
   text-align: center;
 }
 
+.each_project {
+  border:2px;
+  border-color:#E5E5E5;
+  border-style:solid;
+  margin-bottom:20px;
+  padding-bottom:20px;
+
+}
+
 
 a {
   text-decoration: none;
   color:white;
-  font-family: 'Rock Salt', 'Pacifico', 'Cursive';
+
+}
+.footer {
+  margin-top:50px;
+  padding-top:20px;
+  text-align:center;
+  width: 100%;
+  display: block;
+  height:50px;
+  position: absolute;
+  background: #FFF;
+  opacity: .95;
+  z-index: 5;
+  border-top-width:1px;
+  border-top-color:#E5E5E5;
+  border-top-style:solid;
+  padding-bottom:-50px;
 }
 
+.footer li:not(:last-child):after{
+    content: " | ";
+}
+
+
+.footer li {
+  font-family: 'Josefin Sans', sans-serif;
+  list-style:none;
+  display:inline;
+}
+
+.footer a {
+  text-decoration: none;
+  font-weight:bold;
+}
+
+a {
+  font-family: 'Josefin Sans' sans-serif;
+  color:#65c9ff
+}
+
+}
 a:visited {
-color:black;
+color:#555;
 }
 
 a:hover {
   color:#ff65af;
 }
 
-ul {
-  list-style:none;
-}
+
 

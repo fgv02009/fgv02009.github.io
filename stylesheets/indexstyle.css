@@ -1,6 +1,5 @@
 
 body {
-  /*background-color:#ccc1b9;*/
   background-color: white;
   margin:0px;
   display:block;
@@ -57,7 +56,6 @@ h2 {
   position: relative;
   margin-top: -285px;
   font-size: 50px;
-  /*font-family: 'Rock Salt', 'Pacifico', 'Cursive';*/
   font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -97,6 +95,7 @@ text-transform: uppercase;
 
 .footer {
   margin-top:50px;
+  padding-top:20px;
   text-align:center;
   width: 100%;
   display: block;
@@ -122,10 +121,10 @@ text-transform: uppercase;
 .footer a {
   text-decoration: none;
   font-weight:bold;
-  color:#555;
-  /*font-family: 'Rock Salt', 'Pacifico', 'Cursive';*/
 }
-
+a {
+  color:#65c9ff
+}
 
 }
 a:visited {
