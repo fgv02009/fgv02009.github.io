@@ -1,27 +1,40 @@
 <!DOCTYPE HTML>
 <HTML>
-<header>
-    <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
-    <link type = "text/css" rel = "stylesheet" href = "../stylesheets/blog-stylesheet.css"> </header>
-<body>
-    <div id="DivBody">
-    <h1>
-        Classes vs. Modules </h1>
-    <h2>
-        Nouns vs. Adjectives </h2>
-    <h6>
-        12/04/14 </h6>
-        <div id ="content">
-            <p>Modules and classes are similar in a number of ways but it's important to understand how and why they differ. Let's start at the beginning. Creating a module is done the exact same way as creating a class except with the keyword module. i.e.</p>
-            <p><code><pre>
+    <head>
+        <link type = "text/css" rel = "stylesheet" href = "../stylesheets/blog-stylesheet.css"
+    </head>
+    <body>
+        <header>
+          <ul>
+            <li><a href ="https://twitter.com/FloriGarcia1"/>
+              <img src= "Twitter_logo.png"></a>
+            </li>
+            <li><a href ="https://www.facebook.com/flori.garcia.3"/>
+              <img src= "fb_logo.png"></a>
+            </li>
+            <li><a href ="https://plus.google.com/u/0/102513395518148946200/posts?cfem=1"/>
+              <img src= "GooglePlus_logo.png"></a>
+            </li>
+            <li><a href ="https://www.linkedin.com/profile/view?id=156562910&trk=nav_responsive_tab_profile_pic/>"/>
+              <img src= "LinkedIn_logo.png"></a>
+            </li>
+        </ul>
+        </header>
+        <div id="DivBody">
+            <div class = "title">Classes vs. Modules </div>
+            <div class = "subtitle">Nouns vs. Adjectives </div>
+            <h6>12/04/2014 </h6>
+            <div id ="content">
+                <p>Modules and classes are similar in a number of ways but it's important to understand how and why they differ. Let's start at the beginning. Creating a module is done the exact same way as creating a class except with the keyword module. i.e.</p>
+                <p><code><pre>
 module HelloModule
    def greeting
        puts "Hello, there"
    end
 end
-            </pre></code></p>
-            <p>Ok, so what makes modules different from classes? Classes allow you to create instances of them that can execute the class's instance methods; however, modules do not have instances. Instead, modules are mixed into classes. By mixing the module into the class, the instances of that class now have access to the instance methods inside the module. Here is a simple example, expanding on the code above:</p>
-            <p><code><PRE>
+                </pre></code></p>
+                <p>Ok, so what makes modules different from classes? Classes allow you to create instances of them that can execute the class's instance methods; however, modules do not have instances. Instead, modules are mixed into classes. By mixing the module into the class, the instances of that class now have access to the instance methods inside the module. Here is a simple example, expanding on the code above:</p>
+                <p><code><PRE>
 class Person
    include HelloModule
 end
@@ -30,10 +43,10 @@ flori = Person.new
 flori.greeting
 
 => "Hello, there"
-            </PRE></code></p>
-            <p>So the instance method above, flori, is accessing a method inside the module HelloModule. It can do this because flori is an instance of the class Person, and HelloModule is mixed in to Person. Modules help expand the list of methods an instance of a class can have access to. A class can only inherit  from one superclass but a class can mix in as many modules as you want it to. </p>
-            <p>Inheritance becomes an important topic when it comes to modules and classes. It is not a good idea to name a method inside a module the same name as a method inside the class it is mixed into or any of that class' superclasses. When an instance of a class makes a call to a method, it goes through its lookup path and executes the first method it finds with that name. Notice in the example above we mix-in the module into the class Person using the keyword "include". We could have also done this using the keyword "prepend." These two words change the look up path of an instance of a class. Here is an example:</p>
-            <p><code><PRE>
+                </PRE></code></p>
+                <p>So the instance method above, flori, is accessing a method inside the module HelloModule. It can do this because flori is an instance of the class Person, and HelloModule is mixed in to Person. Modules help expand the list of methods an instance of a class can have access to. A class can only inherit  from one superclass but a class can mix in as many modules as you want it to. </p>
+                <p>Inheritance becomes an important topic when it comes to modules and classes. It is not a good idea to name a method inside a module the same name as a method inside the class it is mixed into or any of that class' superclasses. When an instance of a class makes a call to a method, it goes through its lookup path and executes the first method it finds with that name. Notice in the example above we mix-in the module into the class Person using the keyword "include". We could have also done this using the keyword "prepend." These two words change the look up path of an instance of a class. Here is an example:</p>
+                <p><code><PRE>
 <em>Example 1</em>
 module M
    def report
@@ -76,31 +89,30 @@ new_object2 = D.new
 new_object2.report
 
 => "inside module M"
-            </PRE></code></p>
-            <p>The look up path goes like this for the first example (new_object1):</p>
-            <p>I am an instance of class D, I am going to check in class D for a method called Report. Nope, there aren't any methods in class D called report. I'm going to check my superclass. My super class is class C. First, I check for any prepended modules mixed in to class C. Nope, there aren't any. Now I check class C. I found a method called report in class C! I will execute that method. If it hadn't found report in class C it would then check any included modules for the method report before moving on to class C's superclass.</p>
-            <p>In the second example (new_object2) the look up path goes like this:</p>
-            <p>I am an instance of class D, I am going to check in class D for a method called report. Nope, there aren't any methods in class D called report. I'm going to check my superclass. My super class is class C. First, I check for any prepended modules mixed in to class C. Oh, module M is prepended, I will check there for a method called report. I found it! I will execute that method. If it hadn't found report in module M then it would check class C for the method called report.</p>
-            <p>Thus, include puts a module behind the class it is mixed in to in the lookup path. Prepend puts the module before the class it is mixed in to in the lookup path. </p>
-            <p>A final word on classes and modules. It is common practice that class names are nouns and module names are adjectives. Class names tend to describe the objects you are trying to model. Modules are added in to these classes to help describe these objects behaviors. I hope I've been able to help you understand that even though classes and modules look deceivingly similar they are in fact, very different. </p>
+                </PRE></code></p>
+                <p>The look up path goes like this for the first example (new_object1):</p>
+                <p>I am an instance of class D, I am going to check in class D for a method called Report. Nope, there aren't any methods in class D called report. I'm going to check my superclass. My super class is class C. First, I check for any prepended modules mixed in to class C. Nope, there aren't any. Now I check class C. I found a method called report in class C! I will execute that method. If it hadn't found report in class C it would then check any included modules for the method report before moving on to class C's superclass.</p>
+                <p>In the second example (new_object2) the look up path goes like this:</p>
+                <p>I am an instance of class D, I am going to check in class D for a method called report. Nope, there aren't any methods in class D called report. I'm going to check my superclass. My super class is class C. First, I check for any prepended modules mixed in to class C. Oh, module M is prepended, I will check there for a method called report. I found it! I will execute that method. If it hadn't found report in module M then it would check class C for the method called report.</p>
+                <p>Thus, include puts a module behind the class it is mixed in to in the lookup path. Prepend puts the module before the class it is mixed in to in the lookup path. </p>
+                <p>A final word on classes and modules. It is common practice that class names are nouns and module names are adjectives. Class names tend to describe the objects you are trying to model. Modules are added in to these classes to help describe these objects behaviors. I hope I've been able to help you understand that even though classes and modules look deceivingly similar they are in fact, very different. </p>
+            </div>
+        <div id="DivTable">
+            <table>
+                <tr>
+                    <td><img src="fgv02009.jpg"><td/>
+                    <td><h3>By Flori Garcia-Vicente </h3></td>
+                </tr>
+            </table>
         </div>
-    <div id="DivTable">
-    <table>
-        <tr>
-            <td><img src="fgv02009.jpg"><td/>
-            <td><h3>By Flori Garcia-Vicente </h3></td>
-        </tr>
-    </table>
-    </div>
-    <div class = "navlist">
+        <div class = "footer"
             <ul>
-                <li><a href = "../index.html">Home</a></li>
-                <li><a href = "index.html">Blogs</a></li>
-                <li><a href = "#">About Me</a></li>
-                <li><a href = "#">Stuff That Matters</a></li>
-                <li><a href = "#">Projects</a></li>
+                <li><a href ="../index.html">Home</a></li>
+                <li><a href ="../blog/index.html">Blogs</a></li>
+                <li><a href ="#">About Me</a></li>
+                <li><a href ="../Projects/index.html">Projects</a></li>
             </ul>
-    </div>
-</body>
-</div>
+        </div>
+        </div>
+    </body>
 </HTML>

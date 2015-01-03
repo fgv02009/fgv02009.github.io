@@ -1,98 +1,110 @@
 <!DOCTYPE HTML>
 <HTML>
-<header>
-    <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
-    <link type = "text/css" rel = "stylesheet" href = "../stylesheets/blog-stylesheet.css"> </header>
-<body>
-    <div id="DivBody">
-    <h1>
-        Learning New Languages </h1>
-    <h2>
-        Loops in JavaScript </h2>
-    <h6>
-        12/11/2014 </h6>
-        <div id ="content">
-            <p>This week at DBC has been all about learning a new language, JavaScript. It is most commonly used as a part of a web browser. It allows your code to interact with the user and it can alter the content that is being displayed on a webpage. In a lot of ways knowing the language Ruby has helped me learn JavaScript. I know what variables and loops are and I am starting to understand the power of programming languages. However, Ruby and JavaScript are very different. Sometimes knowing one, complicates the way you "speak" in another. It reminds me of the time I took Italian in college. I was already fluent in Spanish and that made it pretty easy for me to read Italian, but when I tried to speak Italian I was often confusing the two languages with each other. So what's so different about these two languages, you might ask.</p>
-            <p>Ruby is considered one of the most user friendly programming languages out there. Even to someone new to coding, Ruby programs can be understood because they have an easy to follow syntax. This is similar to how some languages are easy to read because they sound how they look (they're phonetic). JavaScript is not as friendly a language as Ruby. It favors communicating with the computer over communicating with the programmer. For instance, let's look at loops in Ruby vs. JavaScript.</p>
-            <p>Ruby has a number of methods that make looping easy. If you want to do something 6 times, you use the .times method:</p>
-            <code><pre>
-            6.times {puts "Hello")
-            => Hello
-            Hello
-            Hello
-            Hello
-            Hello
-            Hello
-            </pre></code>
-            <p>See what I mean? Even if you didn't know anything about programming you could probably figure out what that line of code was about to do. </p>
-            <p>Ruby also has enumerable methods that you can use for every element in a collection. The beauty of this is, you don't care how many elements are in this collection, you just want to do it for each one of those elements. For example,</p>
-            <code><pre>
-            number_array = [1,2,3,4,5,6]
-            number_array.each {|num| puts num}
-            =>1
-            2
-            3
-            4
-            5
-            6
-            </pre></code>
-            <p>Again, as someone completely new to programming, other than learning what puts does, it is pretty easy to guess what the code above will do. Ruby also has nifty keywords like "unless" so you can do something unless some condition holds. All these types of loops in JavaScript are covered by a for loop. The syntax for that is:</p>
-            <code><pre>
-            for (var i = 0; i&ltn; i++) {
-                //block of code
-            }
-            </pre></code>
-            <p>The for loop takes three arguments in JavaScript. The first one (var i = 0) initializes a variable, the second one (i&ltn) says to repeat the loop while i &ltn, the last one (i++) reassigns the value of i after each loop by adding one (i++ is fancy for saying i = i+1). Here is an example:</p>
-            <code><pre>
-            var alphabet_array = ["a","b","c","d","e","f"]
+    <head>
+        <link type = "text/css" rel = "stylesheet" href = "../stylesheets/blog-stylesheet.css"
+    </head>
+    <body>
+        <header>
+          <ul>
+            <li><a href ="https://twitter.com/FloriGarcia1"/>
+              <img src= "Twitter_logo.png"></a>
+            </li>
+            <li><a href ="https://www.facebook.com/flori.garcia.3"/>
+              <img src= "fb_logo.png"></a>
+            </li>
+            <li><a href ="https://plus.google.com/u/0/102513395518148946200/posts?cfem=1"/>
+              <img src= "GooglePlus_logo.png"></a>
+            </li>
+            <li><a href ="https://www.linkedin.com/profile/view?id=156562910&trk=nav_responsive_tab_profile_pic/>"/>
+              <img src= "LinkedIn_logo.png"></a>
+            </li>
+        </ul>
+        </header>
+        <div id="DivBody">
+            <div class = "title">Learning New Languages </div>
+            <div class = "subtitle">Loops in JavaScript </div>
+            <h6>12/09/2014 </h6>
+            <div id ="content">
+                <p>This week at DBC has been all about learning a new language, JavaScript. It is most commonly used as a part of a web browser. It allows your code to interact with the user and it can alter the content that is being displayed on a webpage. In a lot of ways knowing the language Ruby has helped me learn JavaScript. I know what variables and loops are and I am starting to understand the power of programming languages. However, Ruby and JavaScript are very different. Sometimes knowing one, complicates the way you "speak" in another. It reminds me of the time I took Italian in college. I was already fluent in Spanish and that made it pretty easy for me to read Italian, but when I tried to speak Italian I was often confusing the two languages with each other. So what's so different about these two languages, you might ask.</p>
+                <p>Ruby is considered one of the most user friendly programming languages out there. Even to someone new to coding, Ruby programs can be understood because they have an easy to follow syntax. This is similar to how some languages are easy to read because they sound how they look (they're phonetic). JavaScript is not as friendly a language as Ruby. It favors communicating with the computer over communicating with the programmer. For instance, let's look at loops in Ruby vs. JavaScript.</p>
+                <p>Ruby has a number of methods that make looping easy. If you want to do something 6 times, you use the .times method:</p>
+                <code><pre>
+                6.times {puts "Hello")
+                => Hello
+                Hello
+                Hello
+                Hello
+                Hello
+                Hello
+                </pre></code>
+                <p>See what I mean? Even if you didn't know anything about programming you could probably figure out what that line of code was about to do. </p>
+                <p>Ruby also has enumerable methods that you can use for every element in a collection. The beauty of this is, you don't care how many elements are in this collection, you just want to do it for each one of those elements. For example,</p>
+                <code><pre>
+                number_array = [1,2,3,4,5,6]
+                number_array.each {|num| puts num}
+                =>1
+                2
+                3
+                4
+                5
+                6
+                </pre></code>
+                <p>Again, as someone completely new to programming, other than learning what puts does, it is pretty easy to guess what the code above will do. Ruby also has nifty keywords like "unless" so you can do something unless some condition holds. All these types of loops in JavaScript are covered by a for loop. The syntax for that is:</p>
+                <code><pre>
+                for (var i = 0; i&ltn; i++) {
+                    //block of code
+                }
+                </pre></code>
+                <p>The for loop takes three arguments in JavaScript. The first one (var i = 0) initializes a variable, the second one (i&ltn) says to repeat the loop while i &ltn, the last one (i++) reassigns the value of i after each loop by adding one (i++ is fancy for saying i = i+1). Here is an example:</p>
+                <code><pre>
+                var alphabet_array = ["a","b","c","d","e","f"]
 
-            for (var i = 0; i&ltalphabet_array.length; i++){
-                console.log(alphabet_array[i])
-            }
+                for (var i = 0; i&ltalphabet_array.length; i++){
+                    console.log(alphabet_array[i])
+                }
 
-            =>a
-            b
-            c
-            d
-            e
-            f
-            </pre></code>
-            <p>So as you can see by using array.length we are basically adding the same functionality as the .each enumerable in Ruby. While JavaScript can provide the same functionality, its version of this loop is a little harder to understand at first glance, and there is more specific rules about syntax so it's easier to forget something. Ruby and JavaScript do have one loop in common, the while loop. In Ruby the loop looks like this:</p>
-            <code><pre>
-            i=0
-            while i&ltnumber_array.length
-               puts ("number at position #{i} = #{number_array[0]}")
-               i++
-            end
-            </pre></code>
-            <p>In Java, the same code looks like this:</p>
-            <code><pre>
-            var i = 0;
+                =>a
+                b
+                c
+                d
+                e
+                f
+                </pre></code>
+                <p>So as you can see by using array.length we are basically adding the same functionality as the .each enumerable in Ruby. While JavaScript can provide the same functionality, its version of this loop is a little harder to understand at first glance, and there is more specific rules about syntax so it's easier to forget something. Ruby and JavaScript do have one loop in common, the while loop. In Ruby the loop looks like this:</p>
+                <code><pre>
+                i=0
+                while i&ltnumber_array.length
+                   puts ("number at position #{i} = #{number_array[0]}")
+                   i++
+                end
+                </pre></code>
+                <p>In Java, the same code looks like this:</p>
+                <code><pre>
+                var i = 0;
 
-            while (i &ltn= alphabet_array.length) {
-               console.log ("letter at position " + i + " is " + alphabet_array[i]);
-               i++;
-            }
-            </pre></code>
-            <p>These loops certainly resemble each other but again you can see the small subtleties in their syntaxes. JavaScript is a powerful language but as far as learning it goes, it will be a little harder to grasp that power because it is not as user friendly as Ruby. </p>
+                while (i &ltn= alphabet_array.length) {
+                   console.log ("letter at position " + i + " is " + alphabet_array[i]);
+                   i++;
+                }
+                </pre></code>
+                <p>These loops certainly resemble each other but again you can see the small subtleties in their syntaxes. JavaScript is a powerful language but as far as learning it goes, it will be a little harder to grasp that power because it is not as user friendly as Ruby. </p>
+            </div>
+        <div id="DivTable">
+            <table>
+                <tr>
+                    <td><img src="fgv02009.jpg"><td/>
+                    <td><h3>By Flori Garcia-Vicente </h3></td>
+                </tr>
+            </table>
         </div>
-    <div id="DivTable">
-    <table>
-        <tr>
-            <td><img src="fgv02009.jpg"><td/>
-            <td><h3>By Flori Garcia-Vicente </h3></td>
-        </tr>
-    </table>
-    </div>
-    <div class = "navlist">
+        <div class = "footer"
             <ul>
-                <li><a href = "../index.html">Home</a></li>
-                <li><a href = "index.html">Blogs</a></li>
-                <li><a href = "#">About Me</a></li>
-                <li><a href = "#">Stuff That Matters</a></li>
-                <li><a href = "#">Projects</a></li>
+                <li><a href ="../index.html">Home</a></li>
+                <li><a href ="../blog/index.html">Blogs</a></li>
+                <li><a href ="#">About Me</a></li>
+                <li><a href ="../Projects/index.html">Projects</a></li>
             </ul>
-    </div>
-</body>
-</div>
+        </div>
+        </div>
+    </body>
 </HTML>
