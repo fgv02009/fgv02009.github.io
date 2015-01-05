@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<HTML>
+    <head>
+        <link type = "text/css" rel = "stylesheet" href = "../stylesheets/blog-stylesheet.css"
+    </head>
+    <body>
+        <header>
+          <ul>
+            <li><a href ="https://twitter.com/FloriGarcia1"/>
+              <img src= "Twitter_logo.png"></a>
+            </li>
+            <li><a href ="https://www.facebook.com/flori.garcia.3"/>
+              <img src= "fb_logo.png"></a>
+            </li>
+            <li><a href ="https://plus.google.com/u/0/102513395518148946200/posts?cfem=1"/>
+              <img src= "GooglePlus_logo.png"></a>
+            </li>
+            <li><a href ="https://www.linkedin.com/profile/view?id=156562910&trk=nav_responsive_tab_profile_pic/>"/>
+              <img src= "LinkedIn_logo.png"></a>
+            </li>
+        </ul>
+        </header>
+        <div id="DivBody">
+            <div class = "title">How to Ask Questions</div>
+            <div class = "subtitle">Getting Answers</div>
+            <h6>1/5/2014</h6>
+            <div id ="content">
+                <p>As a novice to the technology and programming fields, unknown answers are part of my everyday struggle. While working on assignments all week long, dozens of questions pop into my head. Usually I struggle with them on my own and resort to google to help me solve them. I would say about 90% of the time either I am able to figure out the solution on my own or google leads me to someone who has already answered this question for someone else. What happens the other 10% of the time?</p>
+                <p>I ask my DBC cohort members for help. Sometimes this process is painless: I post to the google plus community and within a couple of hours a number of people have responded to my question with solutions to my problems. However, if the question is not phrased well, this process can become tedious. </p>
+                <p>Here is an example of one of my questions to which a cohort member provided me with a quick and clear solution:</p>
+                <p>-----------------------------------------------------------------------------------------------------------------------------------------------------</p>
+                <p>I'm working on the bonus part of the bingo challenge and I'm trying to create an array length 5 with 5 arrays inside of that array also of length five...I have loops within loops but I've tried to break the problem down using IRB:</p>
+                <p><code><pre>
+irb(main):014:0> bingo_board = Array.new(5,Array.new(5))
+=> [[nil, nil, nil, nil, nil], [nil, nil, nil, nil, nil], [nil, nil, nil, nil, nil],
+[nil, nil, nil, nil, nil], [nil, nil, nil, nil, nil]]
+irb(main):015:0> one = (1..15).to_a.shuffle
+=> [14, 12, 3, 5, 13, 1, 10, 6, 2, 15, 11, 4, 8, 9, 7]
+irb(main):016:0> bingo_board[0][0]= one.pop
+=> 7
+irb(main):017:0> bingo_board
+=> [[7, nil, nil, nil, nil], [7, nil, nil, nil, nil], [7, nil, nil, nil, nil],
+[7, nil, nil, nil, nil], [7, nil, nil, nil, nil]]
+irb(main):018:0> </pre></code></p>
+                <p>I think that the line bingo_board[0][0] = one.pop should only populate the first array and the first position in that array (index 0) with 7. However, as you see in the last output of IRB it is populating position bingo_board[0,0], bingo_board[1,0], bingo_board[2,0], bingo_board[3,0], bingo_board[4,0] with 7. Can someone tell me what I'm doing wrong? Thanks in advance!</p>
+                <p>-----------------------------------------------------------------------------------------------------------------------------------------------------</p>
+                <p>Answer that helped me realize what I was doing wrong:</p>
+                <p>g = Array.new(5, Array.new(5)) is different from h = Array.new(5) {Array.new(5)} because each element of g will be the same empty array, but h will make a different empty array for each element. Calling that external block allows you do more elaborate things as well.</p>
+                <p>-----------------------------------------------------------------------------------------------------------------------------------------------------</p>
+                <p>So I was able to change the way I was creating the array and my program started working. There are a number of reasons this question led to good responses. First off, I explained my problem and then I gave an example of my problem by simplifying it and showing the problem using IRB. It also helped that I described what I thought the code should be doing and how that differed from what it was actually doing. This allowed people to better understand where I was getting stuck. To be clear, this is one of my best thought out questions. I don't always get the answers I'm looking for because oftentimes my questions aren't phrased in a meaningful way.</p>
+                <p>Asking questions is important and seems like a no brainer but the way you phrase your questions can have a large impact on the length of time it takes you to get an accurate response. For me, it is easier to write my questions out because I have time to read and reread them before someone else sees them. During this process I like to take a step back and think about whether or not I would understand this question without the background I already have for it. However, when I ask questions in person it is usually a different story. I can't decide what information to present first, causing me to just babble out information in any random order. </p>
+                <p>During phase 0, I've really focused on how I present questions to my cohort online. The clearer I am the more likely I am to get a correct answer in a short amount of time. Going into phase 1, I need to take all the same tools I've been using to write questions and apply them when I ask questions out loud. Here are some useful tools for asking good questions:</p>
+                <p><strong>For written questions - Title Questions</strong></br>
+                The title draws the attention of the reader. It should be a specific and quick summary of your problem.</br>
+                <strong>For written questions - Context</strong></br>
+                This isn't as important when you are asking questions in person because those people will most likely understand the context. However, when asking questions online it is important to provide context: what language are you programming in, do you have any constraints, what platform are you using, etc.</br>
+                <strong>For written and in person questions: Problem Statement</strong></br>
+                Make sure the people you are asking know what you want to get out of the question.  Saying, "I did x and y but it doesn't work" isn't really showing someone what you expect to get out of your question.</br>
+                <strong>For written and in person questions: Data/Research </strong></br>
+                It often helps to show the person you are asking what you tried to do to fix your problem and how you thought it might fix it. Showing your previous research helps the person answering the questions see where you are getting off track.</p>
+                <p> Questions are and always will be a crucial part of learning. It's important to feel comfortable asking them, and knowing how to ask them efficiently. </p>
+            </div>
+        <div id="DivTable">
+            <table>
+                <tr>
+                    <td><img src="fgv02009.jpg"><td/>
+                    <td><h3>By Flori Garcia-Vicente </h3></td>
+                </tr>
+            </table>
+        </div>
+        <div class = "footer"
+            <ul>
+                <li><a href ="../index.html">Home</a></li>
+                <li><a href ="../blog/index.html">Blogs</a></li>
+                <li><a href ="#">About Me</a></li>
+                <li><a href ="../Projects/index.html">Projects</a></li>
+            </ul>
+        </div>
+        </div>
+    </body>
+</HTML>
