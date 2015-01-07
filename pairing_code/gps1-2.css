@@ -15,13 +15,19 @@ footer {
   background-color: black;
 }
 
-.paragraphs {
+p {
   margin: 10px 125px 10px 125px;
 }
 
+.paragraphs {
+  margin-top:25px;
+  margin-bottom:25px;
+}
+
 .images {
-  display: inline-block;
-  margin: 20px 125px 0px 125px;
+  display: block;
+  margin: 20px 100px;
+
 }
 
 img {
@@ -29,11 +35,7 @@ width: 454px;
 height: 302px;
 }
 
-img:nth-child(2) {
-  margin-left: 70px;
+footer {
+  margin-bottom:30px;
 }
 
-.reflection {
-  position: absolute;
-  margin: 10px 140px 10px 0px;
-}
