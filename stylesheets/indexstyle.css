@@ -29,16 +29,19 @@ li {
 display: inline;
 }
 
-header ul li a img {
+ul li img {
   width: 20px;
   height:20px;
 }
 
-.center {
-  height: 75%;
+#contact {
+  float:right;
+  margin-top:-40px;
+  margin-right:50px;
 }
 
-.clearfix {
+.center {
+  height: 75%;
   overflow:auto;
 }
 
@@ -93,7 +96,34 @@ text-transform: uppercase;
   text-decoration:none;
 }
 
+#aboutme {
+  font-family: 'Josefin Sans', sans-serif;
+  display:block;
+  position:relative;
+  overflow:scroll;
+  margin-top:70px;
+}
+
+#floriimg {
+float:left;
+margin-left:20px;
+}
+
+#floritxt{
+float:right;
+width:50%;
+margin-right:20px;
+margin-top:10px;
+}
+
+.headline {
+  font-size:18px;
+  text-transform: uppercase;
+  color:#FFB5B5
+}
+
 .footer {
+  clear:both;
   margin-top:50px;
   padding-top:20px;
   text-align:center;
@@ -107,6 +137,7 @@ text-transform: uppercase;
   border-top-width:1px;
   border-top-color:#E5E5E5;
   border-top-style:solid;
+
 }
 
 .footer li:not(:last-child):after{

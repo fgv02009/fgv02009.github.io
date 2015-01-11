@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>DBC Blog Posts</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../../stylesheets/blogindexstyle-draft.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav">
+          <a class="blog-nav-item active" href="../../index.html">Home</a>
+          <a class="blog-nav-item" href="../index-bs.html">Blogs</a>
+          <a class="blog-nav-item" href="../../Projects/index.html">Projects</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="blog-header">
+        <h1 class="blog-title">DBC Blog Post</h1>
+      </div>
+
+      <div class="row">
+
+        <div class="col-sm-8 blog-main">
+
+          <div class="blog-post">
+            <h2 class="blog-post-title">Classes vs. Modules </h2>
+            <h3 class="blog-post-subtitle">Nouns vs. Adjectives </h3>
+            <p class="blog-post-meta">12/04/2014  by <a href="blog-nav-item active" href="../index.html">Flori</a></p>
+
+            <p>Modules and classes are similar in a number of ways but it's important to understand how and why they differ. Let's start at the beginning. Creating a module is done the exact same way as creating a class except with the keyword module. i.e.</p>
+                <p><pre><code>
+module HelloModule
+   def greeting
+       puts "Hello, there"
+   end
+end
+                </code></pre></p>
+                <p>Ok, so what makes modules different from classes? Classes allow you to create instances of them that can execute the class's instance methods; however, modules do not have instances. Instead, modules are mixed into classes. By mixing the module into the class, the instances of that class now have access to the instance methods inside the module. Here is a simple example, expanding on the code above:</p>
+                <p><pre><code>
+class Person
+   include HelloModule
+end
+
+flori = Person.new
+flori.greeting
+
+=> "Hello, there"
+                </code></pre></p>
+                <p>So the instance method above, flori, is accessing a method inside the module HelloModule. It can do this because flori is an instance of the class Person, and HelloModule is mixed in to Person. Modules help expand the list of methods an instance of a class can have access to. A class can only inherit  from one superclass but a class can mix in as many modules as you want it to. </p>
+                <p>Inheritance becomes an important topic when it comes to modules and classes. It is not a good idea to name a method inside a module the same name as a method inside the class it is mixed into or any of that class' superclasses. When an instance of a class makes a call to a method, it goes through its lookup path and executes the first method it finds with that name. Notice in the example above we mix-in the module into the class Person using the keyword "include". We could have also done this using the keyword "prepend." These two words change the look up path of an instance of a class. Here is an example:</p>
+                <p><pre><code>
+<em>Example 1</em>
+module M
+   def report
+        puts "inside module M"
+    end
+
+class C
+   include module M
+   def report
+       puts "inside Class C"
+    end
+end
+
+class D < C (D is a subclass of C)
+end
+
+new_object1 = D.new
+new_object1.report
+
+=> "inside Class C"
+
+----------------------------------------------------
+<em>Example 2</em>
+module M
+   def report
+        puts "inside module M"
+    end
+
+class C
+   prepend module M
+   def report
+       puts "inside Class C"
+    end
+end
+
+class D < C (D is a subclass of C)
+end
+
+new_object2 = D.new
+new_object2.report
+
+=> "inside module M"
+                </code></pre></p>
+                <p>The look up path goes like this for the first example (new_object1):</p>
+                <p>I am an instance of class D, I am going to check in class D for a method called Report. Nope, there aren't any methods in class D called report. I'm going to check my superclass. My super class is class C. First, I check for any prepended modules mixed in to class C. Nope, there aren't any. Now I check class C. I found a method called report in class C! I will execute that method. If it hadn't found report in class C it would then check any included modules for the method report before moving on to class C's superclass.</p>
+                <p>In the second example (new_object2) the look up path goes like this:</p>
+                <p>I am an instance of class D, I am going to check in class D for a method called report. Nope, there aren't any methods in class D called report. I'm going to check my superclass. My super class is class C. First, I check for any prepended modules mixed in to class C. Oh, module M is prepended, I will check there for a method called report. I found it! I will execute that method. If it hadn't found report in module M then it would check class C for the method called report.</p>
+                <p>Thus, include puts a module behind the class it is mixed in to in the lookup path. Prepend puts the module before the class it is mixed in to in the lookup path. </p>
+                <p>A final word on classes and modules. It is common practice that class names are nouns and module names are adjectives. Class names tend to describe the objects you are trying to model. Modules are added in to these classes to help describe these objects behaviors. I hope I've been able to help you understand that even though classes and modules look deceivingly similar they are in fact, very different. </p>
+            <hr>
+<!--             <blockquote>
+              <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            </blockquote> -->
+            <!-- <h2>Heading</h2> -->
+
+           <!--  <h3>Sub-heading</h3> -->
+            <!-- <pre><code>Example code block</code></pre> -->
+           <!--  <h3>Sub-heading</h3> -->
+          <!--   <ul>
+              <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+              <li>Donec id elit non mi porta gravida at eget metus.</li>
+              <li>Nulla vitae elit libero, a pharetra augue.</li>
+            </ul> -->
+<!--             <ol>
+              <li>Vestibulum id ligula porta felis euismod semper.</li>
+              <li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
+              <li>Maecenas sed diam eget risus varius blandit sit amet non magna.</li>
+            </ol> -->
+          </div><!-- /.blog-post -->
+          <nav>
+            <ul class="pager">
+              <li><a href="c6-stereotype-threat.html">Previous</a></li>
+              <li><a href="c7-values.html">Next</a></li>
+            </ul>
+          </nav>
+
+        </div><!-- /.blog-main -->
+
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+            <h4>About</h4>
+            <p> My name is Flori Garcia-Vicente and I'm a student an Dev Bootcamp. These blog posts track my experience at Dev Bootcamp, where I am learning Ruby on Rail. Enjoy!</p>
+          </div>
+<!--           <div class="sidebar-module">
+            <h4>Archives</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">10/29/2014</a></li>
+              <li><a href="#">11/04/2014</a></li>
+              <li><a href="#">January 2014</a></li>
+              <li><a href="#">December 2013</a></li>
+              <li><a href="#">November 2013</a></li>
+              <li><a href="#">October 2013</a></li>
+              <li><a href="#">September 2013</a></li>
+              <li><a href="#">August 2013</a></li>
+              <li><a href="#">July 2013</a></li>
+              <li><a href="#">June 2013</a></li>
+              <li><a href="#">May 2013</a></li>
+              <li><a href="#">April 2013</a></li>
+            </ol>
+          </div>
+          <div class="sidebar-module"> -->
+            <h4>Elsewhere</h4>
+            <ol class="list-unstyled">
+              <li><a href="https://plus.google.com/u/0/102513395518148946200/posts?cfem=1">GitHub</a></li>
+              <li><a href="https://twitter.com/FloriGarcia1">Twitter</a></li>
+              <li><a href="https://www.facebook.com/flori.garcia.3?fref=ts">Facebook</a></li>
+            </ol>
+          </div>
+        </div><!-- /.blog-sidebar -->
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+
+    <footer class="blog-footer">
+      <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+      <p>
+        <a href="#">Back to top</a>
+      </p>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

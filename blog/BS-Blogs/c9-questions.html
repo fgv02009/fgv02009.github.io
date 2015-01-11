@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>DBC Blog Posts</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../../stylesheets/blogindexstyle-draft.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav">
+          <a class="blog-nav-item active" href="../../index.html">Home</a>
+          <a class="blog-nav-item" href="../index-bs.html">Blogs</a>
+          <a class="blog-nav-item" href="../../Projects/index.html">Projects</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="blog-header">
+        <h1 class="blog-title">DBC Blog Post</h1>
+      </div>
+
+      <div class="row">
+
+        <div class="col-sm-8 blog-main">
+
+          <div class="blog-post">
+            <h2 class="blog-post-title">How to Ask Questions </h2>
+            <h3 class="blog-post-subtitle">Getting Answers</h3>
+            <p class="blog-post-meta">1/05/2014  by <a href="blog-nav-item active" href="../index.html">Flori</a></p>
+
+            <p>As a novice to the technology and programming fields, unknown answers are part of my everyday struggle. While working on assignments all week long, dozens of questions pop into my head. Usually I struggle with them on my own and resort to google to help me solve them. I would say about 90% of the time either I am able to figure out the solution on my own or google leads me to someone who has already answered this question for someone else. What happens the other 10% of the time?</p>
+            <p>I ask my DBC cohort members for help. Sometimes this process is painless: I post to the google plus community and within a couple of hours a number of people have responded to my question with solutions to my problems. However, if the question is not phrased well, this process can become tedious. </p>
+            <p>Here is an example of one of my questions to which a cohort member provided me with a quick and clear solution:</p>
+            <p>-------------------------------------------------------------------------------------------</p>
+            <p>I'm working on the bonus part of the bingo challenge and I'm trying to create an array length 5 with 5 arrays inside of that array also of length five...I have loops within loops but I've tried to break the problem down using IRB:</p>
+            <p><pre><code>
+irb(main):014:0> bingo_board = Array.new(5,Array.new(5))
+=> [[nil, nil, nil, nil, nil], [nil, nil, nil, nil, nil], [nil, nil, nil, nil, nil],
+[nil, nil, nil, nil, nil], [nil, nil, nil, nil, nil]]
+irb(main):015:0> one = (1..15).to_a.shuffle
+=> [14, 12, 3, 5, 13, 1, 10, 6, 2, 15, 11, 4, 8, 9, 7]
+irb(main):016:0> bingo_board[0][0]= one.pop
+=> 7
+irb(main):017:0> bingo_board
+=> [[7, nil, nil, nil, nil], [7, nil, nil, nil, nil], [7, nil, nil, nil, nil],
+[7, nil, nil, nil, nil], [7, nil, nil, nil, nil]]
+irb(main):018:0> </code></pre></p>
+            <p>I think that the line bingo_board[0][0] = one.pop should only populate the first array and the first position in that array (index 0) with 7. However, as you see in the last output of IRB it is populating position bingo_board[0,0], bingo_board[1,0], bingo_board[2,0], bingo_board[3,0], bingo_board[4,0] with 7. Can someone tell me what I'm doing wrong? Thanks in advance!</p>
+            <p>-------------------------------------------------------------------------------------------</p>
+            <p>Answer that helped me realize what I was doing wrong:</p>
+            <p>g = Array.new(5, Array.new(5)) is different from h = Array.new(5) {Array.new(5)} because each element of g will be the same empty array, but h will make a different empty array for each element. Calling that external block allows you do more elaborate things as well.</p>
+            <p>-------------------------------------------------------------------------------------------</p>
+            <p>So I was able to change the way I was creating the array and my program started working. There are a number of reasons this question led to good responses. First off, I explained my problem and then I gave an example of my problem by simplifying it and showing the problem using IRB. It also helped that I described what I thought the code should be doing and how that differed from what it was actually doing. This allowed people to better understand where I was getting stuck. To be clear, this is one of my best thought out questions. I don't always get the answers I'm looking for because oftentimes my questions aren't phrased in a meaningful way.</p>
+            <p>Asking questions is important and seems like a no brainer but the way you phrase your questions can have a large impact on the length of time it takes you to get an accurate response. For me, it is easier to write my questions out because I have time to read and reread them before someone else sees them. During this process I like to take a step back and think about whether or not I would understand this question without the background I already have for it. However, when I ask questions in person it is usually a different story. I can't decide what information to present first, causing me to just babble out information in any random order. </p>
+            <p>During phase 0, I've really focused on how I present questions to my cohort online. The clearer I am the more likely I am to get a correct answer in a short amount of time. Going into phase 1, I need to take all the same tools I've been using to write questions and apply them when I ask questions out loud. Here are some useful tools for asking good questions:</p>
+            <p><strong>For written questions - Title Questions</strong></br>
+                The title draws the attention of the reader. It should be a specific and quick summary of your problem.</br>
+            <strong>For written questions - Context</strong></br>
+            This isn't as important when you are asking questions in person because those people will most likely understand the context. However, when asking questions online it is important to provide context: what language are you programming in, do you have any constraints, what platform are you using, etc.</br>
+            <strong>For written and in person questions: Problem Statement</strong></br>
+            Make sure the people you are asking know what you want to get out of the question.  Saying, "I did x and y but it doesn't work" isn't really showing someone what you expect to get out of your question.</br>
+            <strong>For written and in person questions: Data/Research </strong></br>
+            It often helps to show the person you are asking what you tried to do to fix your problem and how you thought it might fix it. Showing your previous research helps the person answering the questions see where you are getting off track.</p>
+            <p> Questions are and always will be a crucial part of learning. It's important to feel comfortable asking them, and knowing how to ask them efficiently. </p>
+            <hr>
+<!--             <blockquote>
+              <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            </blockquote> -->
+            <!-- <h2>Heading</h2> -->
+
+           <!--  <h3>Sub-heading</h3> -->
+            <!-- <pre><code>Example code block</code></pre> -->
+           <!--  <h3>Sub-heading</h3> -->
+          <!--   <ul>
+              <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+              <li>Donec id elit non mi porta gravida at eget metus.</li>
+              <li>Nulla vitae elit libero, a pharetra augue.</li>
+            </ul> -->
+<!--             <ol>
+              <li>Vestibulum id ligula porta felis euismod semper.</li>
+              <li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
+              <li>Maecenas sed diam eget risus varius blandit sit amet non magna.</li>
+            </ol> -->
+          </div><!-- /.blog-post -->
+          <nav>
+            <ul class="pager">
+              <li><a href="c8-conflict.html">Previous</a></li>
+              <li><a href="c9-questions.html">Next</a></li>
+            </ul>
+          </nav>
+
+        </div><!-- /.blog-main -->
+
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+            <h4>About</h4>
+            <p> My name is Flori Garcia-Vicente and I'm a student an Dev Bootcamp. These blog posts track my experience at Dev Bootcamp, where I am learning Ruby on Rail. Enjoy!</p>
+          </div>
+<!--           <div class="sidebar-module">
+            <h4>Archives</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">10/29/2014</a></li>
+              <li><a href="#">11/04/2014</a></li>
+              <li><a href="#">January 2014</a></li>
+              <li><a href="#">December 2013</a></li>
+              <li><a href="#">November 2013</a></li>
+              <li><a href="#">October 2013</a></li>
+              <li><a href="#">September 2013</a></li>
+              <li><a href="#">August 2013</a></li>
+              <li><a href="#">July 2013</a></li>
+              <li><a href="#">June 2013</a></li>
+              <li><a href="#">May 2013</a></li>
+              <li><a href="#">April 2013</a></li>
+            </ol>
+          </div>
+          <div class="sidebar-module"> -->
+            <h4>Elsewhere</h4>
+            <ol class="list-unstyled">
+              <li><a href="https://plus.google.com/u/0/102513395518148946200/posts?cfem=1">GitHub</a></li>
+              <li><a href="https://twitter.com/FloriGarcia1">Twitter</a></li>
+              <li><a href="https://www.facebook.com/flori.garcia.3?fref=ts">Facebook</a></li>
+            </ol>
+          </div>
+        </div><!-- /.blog-sidebar -->
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+
+    <footer class="blog-footer">
+      <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+      <p>
+        <a href="#">Back to top</a>
+      </p>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

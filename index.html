@@ -2,14 +2,13 @@
 
 <html>
   <head>
-    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Anton' rel='stylesheet' type='text/css'>
     <link type = "text/css" rel = "stylesheet" href = "stylesheets/indexstyle.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="index.js"></script>
   </head>
   <body>
     <header>
-      <ul>
+      <ul id = "social">
         <li><a href ="https://twitter.com/FloriGarcia1"/>
           <img src= "blog/Twitter_logo.png"></a>
         </li>
@@ -19,9 +18,13 @@
         <li><a href ="https://plus.google.com/u/0/102513395518148946200/posts?cfem=1"/>
           <img src= "blog/GooglePlus_logo.png"></a>
         </li>
-        <li><a href ="https://www.linkedin.com/profile/view?id=156562910&trk=nav_responsive_tab_profile_pic/>"/>
+        <li><a href ="https://www.linkedin.com/pub/florencia-garcia-vicente/44/523/652"/>
           <img src= "blog/LinkedIn_logo.png"></a>
         </li>
+      </ul>
+      <ul id = "contact">
+        <li><img id = "mail" src= "blog/email.png" title = "flori.garciavicente@gmail.com"></li>
+        <li><img id = "phone" src= "blog/phone.jpeg"></li>
       </ul>
     </header>
     <div class = "center clearfix">
@@ -32,9 +35,32 @@
       <div class = "tagline_1"> Hey everyone! </div>
       <div class = "tagline_2">I'm a student learning Ruby on Rails at <a href = "http://devbootcamp.com/">Dev Bootcamp!</a></div>
     </div>
+    <div id = "aboutme">
+      <div id = "floriimg"><img src = "blog/flori2.jpg"></div>
+      <div id = "floritxt">
+        <div class = "headline">Education</div>
+        <div class = "txt">
+          <p>I graduated from Pomona College in May 2013 with a Bachelor's degree in Mathematical Economics and a minor in Mathematics. I am currently a student at Dev Bootcamp and expected to graduate on March 20, 2015. </p>
+        </div>
+        <div class = "headline"> Family and Background </div>
+        <div class ="txt">
+          <p> I was born in Buenos Aires, Argentina and my family moved to Chicago shortly after. I grew up mostly in Crown Point, Indiana and returned back to Chicago after undergrad. </p>
+        </div>
+        <div class = "headline"> Experience </div>
+        <div class = "txt">
+          <p>After graduating from Pomona College, I took a job working for FTI Consulting in the Corporate Finance/Restructuring group based in Chicago. During my time at FTI, I worked on a variety of cases mostly helping my team with analysis used to advise distressed companies. (Check out my <a href = "https://www.linkedin.com/pub/florencia-garcia-vicente/44/523/652/">linkedin</a> for more details.)</p>
+          <p> I left FTI at the end of October to start at Dev Bootcamp. At Dev Bootcamp I am learning Ruby on Rails, html, css, javascript, git and source control. I am very excited to start pursuing my career as a developer. </p>
+        </div>
+        <div class = "headline"> Interests </div>
+        <div class = "txt">
+          <p> Outside of programming and finance, I am passionate about behavioral economics and urban and regional economics. I am currently in the process of editing and submitting my senior thesis "A Long-Run View of IT Clustering in the American Market" to a peer-reviewed journal.<p>
+          <p> I also love to play and watch sports. I grew up playing soccer, basketball and gymnastics and I love to play pickup games and stay active. I also love to read! Some of my favorite books include: Into Thin Air, Unbroken, Devil in the White City, Outliars and The Racketeer. Finally, I'm very passionate about traveling. I want to see as much of the world as I possibly can. </p>
+        </div>
+      </div>
+    </div>
     <div class = "footer"
       <ul>
-        <li><a href ="blog/index.html">Blogs</a></li>
+        <li><a href ="blog/index-bs.html">Blogs</a></li>
         <li><a href ="#">About Me</a></li>
         <li><a href ="Projects/index.html">Projects</a></li>
       </ul>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>DBC Blog Posts</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../../stylesheets/blogindexstyle-draft.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav">
+          <a class="blog-nav-item active" href="../../index.html">Home</a>
+          <a class="blog-nav-item" href="../index-bs.html">Blogs</a>
+          <a class="blog-nav-item" href="../../Projects/index.html">Projects</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="blog-header">
+        <h1 class="blog-title">DBC Blog Post</h1>
+      </div>
+
+      <div class="row">
+
+        <div class="col-sm-8 blog-main">
+
+          <div class="blog-post">
+            <h2 class="blog-post-title">.group_by </h2>
+            <h3 class="blog-post-subtitle">How To Use The .group_by Method </h3>
+            <p class="blog-post-meta">11/18/2014  by <a href="blog-nav-item active" href="../index.html">Flori</a></p>
+
+            <p>The enumerable module provides a number of methods that are used to traverse, sort, arrange and rearrange collections. These methods have proven EXTREMELY useful as I've made my way through Phase 0. The method I'm going to teach  is a method called .group_by.</p>
+            <p>The thing to remember about enumerables, is that they are used on collections. The .group_by method in its most simplistic use can take a collection and pass it into a hash that describes the way you wanted the original collection grouped. This will be much easier to understand through examples. Let's say you have a collection of numbers from 1 to 30 and you want to group it by number left over when divided by 4. In programming this is called the modulus and it is represented with the % sign. So for instance 5%4 returns 1, because the remainder of 5/4 is 1. Therefore, if we go back to our example above we can see that our collection of numbers will be broken down into 4 groups. The group that has a remainder of 0, 1, 2, and 3 when divided by 4. This is what the code would look like:</p>
+            <pre><code>(1..30).group_by {|i| i%4}
+            </code></pre>
+            <p>It would return a hash like this:</p>
+            <pre><code>
+{0=>[1,2,3,4,8,12,16,20,24,28], 1 => [5,9,13,17,21,25,29], 2 => [6,10,14,18,22,26,30], 3 => [7,11,15,19,23,27]}
+            </pre></code>
+            <p>Ok, so maybe you're starting to get it but that doesn't seem like a relevant use of grouping. What if you had a collection of book titles and you wanted to group them by genre. You would have to use a bit more complex code by the idea would be the same:</p>
+            <pre><code>
+books = ["book1", "book2", "book3", "book4"] <br>
+            </code></pre>
+            <pre><code>
+genre_hash = books.group_by do |genre|
+   case rating
+    when "book1" || "book2"
+        "historical fiction"
+    when "book3"
+        "science fiction"
+    when "book4"
+        "non-fiction"
+    end
+end
+                </code></pre>
+            <p>This would return a hash like this:</p>
+            <pre><code>
+{"historical fiction"=>["book1", "book2"], "science fiction"=>["book3"], "non-fiction"=>[book4]}
+            </code></pre>
+            <p>Hope these examples helped you understand the group_by method!</p>
+            <hr>
+<!--             <blockquote>
+              <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            </blockquote> -->
+            <!-- <h2>Heading</h2> -->
+
+           <!--  <h3>Sub-heading</h3> -->
+            <!-- <pre><code>Example code block</code></pre> -->
+           <!--  <h3>Sub-heading</h3> -->
+          <!--   <ul>
+              <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+              <li>Donec id elit non mi porta gravida at eget metus.</li>
+              <li>Nulla vitae elit libero, a pharetra augue.</li>
+            </ul> -->
+<!--             <ol>
+              <li>Vestibulum id ligula porta felis euismod semper.</li>
+              <li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
+              <li>Maecenas sed diam eget risus varius blandit sit amet non magna.</li>
+            </ol> -->
+          </div><!-- /.blog-post -->
+          <nav>
+            <ul class="pager">
+              <li><a href="c4-tech-issues.html">Previous</a></li>
+              <li><a href="c5-feedback.html">Next</a></li>
+            </ul>
+          </nav>
+
+        </div><!-- /.blog-main -->
+
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+            <h4>About</h4>
+            <p> My name is Flori Garcia-Vicente and I'm a student an Dev Bootcamp. These blog posts track my experience at Dev Bootcamp, where I am learning Ruby on Rail. Enjoy!</p>
+          </div>
+<!--           <div class="sidebar-module">
+            <h4>Archives</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">10/29/2014</a></li>
+              <li><a href="#">11/04/2014</a></li>
+              <li><a href="#">January 2014</a></li>
+              <li><a href="#">December 2013</a></li>
+              <li><a href="#">November 2013</a></li>
+              <li><a href="#">October 2013</a></li>
+              <li><a href="#">September 2013</a></li>
+              <li><a href="#">August 2013</a></li>
+              <li><a href="#">July 2013</a></li>
+              <li><a href="#">June 2013</a></li>
+              <li><a href="#">May 2013</a></li>
+              <li><a href="#">April 2013</a></li>
+            </ol>
+          </div>
+          <div class="sidebar-module"> -->
+            <h4>Elsewhere</h4>
+            <ol class="list-unstyled">
+              <li><a href="https://plus.google.com/u/0/102513395518148946200/posts?cfem=1">GitHub</a></li>
+              <li><a href="https://twitter.com/FloriGarcia1">Twitter</a></li>
+              <li><a href="https://www.facebook.com/flori.garcia.3?fref=ts">Facebook</a></li>
+            </ol>
+          </div>
+        </div><!-- /.blog-sidebar -->
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+
+    <footer class="blog-footer">
+      <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+      <p>
+        <a href="#">Back to top</a>
+      </p>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
